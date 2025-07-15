@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+  <version major="4" minor="0" revision="9" build="328" />
+  <region id="SpellLists">
+    <node id="root">
+      <children>
+        <node id="SpellList">
+            <attribute id="Name" type="FixedString" value="Ritual Caster Ritual Spells" />
+            <attribute id="Spells" type="LSString" value="Target_SpeakWithDead;Target_FindFamiliar;Target_Longstrider;Target_Jump;Shout_DisguiseSelf;Shout_SpeakWithAnimals;Target_AntHaul;Target_Ceremony_Ritual;Shout_DetectMagic;Shout_DetectThoughts;Target_Jump;Shout_FeatherFall;Target_Longstrider;Target_UnseenServant_Ritual;Shout_CommuneWithNature;Shout_WaterWalk" />
+            <attribute id="UUID" type="guid" value="c3d37058-9a90-4643-91ec-848df48ba452" />
+        </node>
+        <node id="SpellList">
+            <attribute id="Name" type="FixedString" value="Ritual Caster Cantrips" />
+            <attribute id="Spells" type="LSString" value="Target_DancingLights;Target_Friends;Target_Guidance;Target_Light;Target_MageHand;Target_MinorIllusion;Target_Resistance;Shout_Thaumaturgy" />
+            <attribute id="UUID" type="guid" value="54634207-d1dc-4d17-ac09-2ded104bec9d" />
+        </node>
+        <node id="SpellList">
+          <attribute id="Name" type="FixedString" value="SpellSniperAttackSpells" />
+          <attribute id="Spells" type="LSString" value="Target_ChillTouch;Projectile_EldritchBlast;Projectile_FireBolt;Target_Frostbite;Projectile_IllusionaryDart;Target_LightningLure;Projectile_RayOfFrost;Projectile_RockSlam;Target_ShockingGrasp;Target_SonicBlast;Target_ThornWhip;Target_WaterBullet" />
+          <attribute id="UUID" type="guid" value="12e92350-3adb-4b2c-a59c-f012fe497d32" />
+        </node>
+      </children>
+    </node>
+  </region>
+</save>

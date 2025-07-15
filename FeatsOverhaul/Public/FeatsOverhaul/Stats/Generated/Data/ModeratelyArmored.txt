@@ -1,0 +1,28 @@
+// Updated description text
+new entry "ModeratelyArmored"
+type "PassiveData"
+data "DisplayName" "h150cb7dc07fb4b409c9d1956385e1c442143;1"
+data "Description" "h06b53ccbd2904ff1bf2cf7a4cdfd4c60566e;1"
+data "DescriptionParams" "1"
+data "Icon" "PassiveFeature_ModeratelyArmored"
+data "Properties" "Highlighted"
+data "Boosts" "Proficiency(MediumArmor);Proficiency(Shields)"
+
+// Ability score improvements through passives
+new entry "ModeratelyArmored_Strength"
+type "PassiveData"
+data "DisplayName" "hc04ddde6gcf4bg499dga9a5gd7fe6f713135;1"
+data "Description" "hf51dd462gb417g4b3bg9abegb841dfb988a7;1"
+data "DescriptionParams" "1"
+data "Icon" "GenericIcon_Intent_Buff"
+data "Properties" "IsHidden"
+data "Boosts" "Ability(Strength, 1);RollBonus(SavingThrow,1,Strength)"
+
+new entry "ModeratelyArmored_Dexterity"
+type "PassiveData"
+data "DisplayName" "he3f16e43g6666g44eeg89e8ge2790e9930ad;1"
+data "Description" "h1c4db49egc213g4be2g843dga5c4a9b3389c;1"
+data "DescriptionParams" "1"
+data "Icon" "GenericIcon_Intent_Buff"
+data "Properties" "IsHidden"
+data "Boosts" "Ability(Dexterity, 1);RollBonus(SavingThrow,1,Dexterity)"

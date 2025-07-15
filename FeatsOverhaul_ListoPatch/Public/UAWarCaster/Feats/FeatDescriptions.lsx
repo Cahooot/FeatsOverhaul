@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="328"/>
+	<region id="FeatDescriptions">
+		<node id="root">
+			<children>
+
+				<node id="FeatDescription">
+					<!-- <attribute id="Description" type="TranslatedString" handle="h38ecd31dgf4a3g48f2g8f4eg001116af57de" version="1"/> -->
+					<attribute id="Description" type="TranslatedString" handle="h38ecd31dgf4a3g48f2g8f4eg001116af57de" version="1"/>
+					<!-- <attribute id="DisplayName" type="TranslatedString" handle="h72ef015ag83f0g463ag93eegbdd654211c39" version="1"/> -->
+					<attribute id="DisplayName" type="TranslatedString" handle="h6cee28687ca14f85a43334b0112a50d7ae73" version="1"/>
+					<attribute id="ExactMatch" type="FixedString" value="WarCaster"/>
+					<attribute id="FeatId" type="guid" value="ed4e367d-d136-4285-abac-077147e84cf2"/>
+					<attribute id="UUID" type="guid" value="ce02138b-918a-4191-87d1-092892642ff8"/>
+				</node>
+
+				<!-- <node id="FeatDescription">
+					<attribute id="Description" type="TranslatedString" handle="hf1c82907gfd6ag4bf3g884eged5fae362817" version="1"/>
+					<attribute id="DisplayName" type="TranslatedString" handle="h16aeee0dg9074g4f9bg9893g37487b8b2436" version="1"/>
+					<attribute id="ExactMatch" type="FixedString" value="DWE_WarCaster_UA2"/>
+					<attribute id="FeatId" type="guid" value="2e4c667d-993d-4dc4-8d2a-23928f840498"/>
+					<attribute id="UUID" type="guid" value="af028e7b-dc0e-4637-877a-160e1a6220a0"/>
+				</node> -->
+
+			</children>
+		</node>
+	</region>
+</save>

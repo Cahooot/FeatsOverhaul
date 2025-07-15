@@ -1,0 +1,21 @@
+// Editing localization from Dual Wielding Master
+
+new entry "DualWielder_Focus_Attack"
+type "PassiveData"
+using "DualWielder_Focus_Attack"
+data "DisplayName" "h4cb2ca79ge560g4a75g9566g96c5835aa145;2"
+data "Description" "h2c1ef704gcb15g4d1agbd6bgb9f9023e6456;2"
+
+new entry "DUAL_WIELDING_FOCUS"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DUAL_WIELDING_FOCUS"
+data "DisplayName" "h4cb2ca79ge560g4a75g9566g96c5835aa145;2"
+data "Description" "h464f44f8g7e7ag4d93gb1eeg1c202b314b8e;4"
+
+new entry "DUAL_WIELDING_BONUS_ATTACK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DUAL_WIELDING_BONUS_ATTACK"
+data "DisplayName" "h77041bc6g41c5g4ad3g835fg7f03565dc187;2"
+data "Description" "h15cf0acfgf98dg4d98g9783g50ee33c18234;4"

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<contentList>
+	<content contentuid="h029c61a3g6b59g79a4g2fc9g3f32ea0fe99e" version="1">Dual Wielder</content>
+	<content contentuid="hba97fa34g9630g4a2cgaa09g94f184dc1099" version="6">You gain &lt;LSTag Type="Passive" Tooltip="FightingStyle_TwoWeaponFighting"&gt;Two-Weapon Fighting&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;You can dual wield even if your weapons aren't &lt;LSTag Tooltip="Light"&gt;Light&lt;/LSTag&gt;, and you gain a +1 bonus to &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt; while wielding a melee weapon in each hand. You cannot dual-wield &lt;LSTag Tooltip="TwoHanded"&gt;Two-Handed&lt;/LSTag&gt; weapons.&lt;br&gt;&lt;br&gt;When wielding a melee weapon in each hand, you can attack with both weapons without consuming a &lt;LSTag Tooltip="BonusAction"&gt;bonus action&lt;/LSTag&gt;, at the cost of a -3 penalty to the &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;. (You can toggle this on and off)</content>
+	<content contentuid="h4cb2ca79ge560g4a75g9566g96c5835aa145" version="1">Dual Wielding Master</content>
+	<content contentuid="h2c1ef704gcb15g4d1agbd6bgb9f9023e6456" version="1">Focus on attacking with both weapons. Attacking with both weapons does not consume a &lt;LSTag Tooltip="BonusAction"&gt;bonus action&lt;/LSTag&gt;, at the cost of a -3 penalty to the &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;. (You can toggle this on and off)</content>
+	<content contentuid="h464f44f8g7e7ag4d93gb1eeg1c202b314b8e" version="1">You are focused on attacking with both weapons. While focused, attacking with both weapons does not consume a &lt;LSTag Tooltip="BonusAction"&gt;bonus action&lt;/LSTag&gt;, at the cost of a -3 &lt;LSTag Tooltip="AttackRoll"&gt;Attack Roll&lt;/LSTag&gt; penalty.</content>
+	<content contentuid="h77041bc6g41c5g4ad3g835fg7f03565dc187" version="1">Bonus Off-Hand Attack</content>
+	<content contentuid="h15cf0acfgf98dg4d98g9783g50ee33c18234" version="1">&lt;LSTag Type="Passive" Tooltip="DualWielder_Focus_Attack"&gt;Dual Wielding Master&lt;/LSTag&gt; allows you to make an additional attack.</content>
+</contentList>

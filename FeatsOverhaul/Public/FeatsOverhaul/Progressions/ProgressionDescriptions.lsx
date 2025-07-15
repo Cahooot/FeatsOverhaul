@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+  <version major="4" minor="0" revision="9" build="328" />
+  <region id="ProgressionDescriptions">
+    <node id="root">
+      <children>
+        <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="habb10b1fg56cdgf350gafdbg7ecddd957a9e" version="1" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hdbf07665g78f7ge899gdb73g751b7a0b8475" version="2" />
+                    <attribute id="Hidden" type="bool" value="false" />
+                    <attribute id="PassivePrototype" type="FixedString" value="GreatWeaponMaster_BonusDamage" />
+                    <attribute id="Type" type="FixedString" value="RollBonus" />
+                    <attribute id="UUID" type="guid" value="6280318f-6d55-4476-a03d-8a306688abd5" />
+                </node>
+        <node id="ProgressionDescription">
+                    <attribute id="Description" type="TranslatedString" handle="h129d6c54gf851g52fdg1b77g5be1811194b3" version="2" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="ha5123ddfg2661gfd58g638fgac1584efc121" version="2" />
+                    <attribute id="Hidden" type="bool" value="false" />
+                    <attribute id="PassivePrototype" type="FixedString" value="GreatWeaponMaster_BonusDamage" />
+                    <attribute id="Type" type="FixedString" value="CharacterWeaponDamage" />
+                    <attribute id="UUID" type="guid" value="2e4c9331-93aa-4654-a808-53f66361cdde" />
+                </node>
+      </children>
+    </node>
+  </region>
+</save>

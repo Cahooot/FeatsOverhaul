@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="322"/>
+	<region id="Feats">
+		<node id="root">
+			<children>
+
+				<node id="Feat">
+					<attribute id="Name" type="FixedString" value="WarCaster"/>
+					<!-- <attribute id="PassivesAdded" type="LSString" value="WarCaster_Bonuses;UAWarCaster_Reactions_2014"/> -->
+					<attribute id="PassivesAdded" type="LSString" value="WarCaster_Bonuses;UAWarCaster_Reactions_UA2"/>
+					<!-- <attribute id="Selectors" type="LSString" value=""/> -->
+					<attribute id="Selectors" type="LSString" value="SelectAbilities(771b7e52-3744-4792-93f0-978aee3b1e27,1,1,DWE_WarCaster_UA2_ASI)"/>
+					<attribute id="UUID" type="guid" value="ed4e367d-d136-4285-abac-077147e84cf2"/>
+				</node>
+
+				<!-- <node id="Feat">
+					<attribute id="Name" type="FixedString" value="DWE_WarCaster_UA2"/>
+					<attribute id="PassivesAdded" type="LSString" value="WarCaster_Bonuses;UAWarCaster_Reactions_UA2"/>
+                    <attribute id="Selectors" type="LSString" value="SelectAbilities(771b7e52-3744-4792-93f0-978aee3b1e27,1,1,DWE_WarCaster_UA2_ASI)"/>
+					<attribute id="UUID" type="guid" value="2e4c667d-993d-4dc4-8d2a-23928f840498"/>
+				</node> -->
+
+			</children>
+		</node>
+	</region>
+</save>

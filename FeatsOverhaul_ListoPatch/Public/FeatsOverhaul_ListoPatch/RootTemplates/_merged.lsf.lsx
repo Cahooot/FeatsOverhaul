@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="328" lslib_meta="v1,bswap_guids" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+				<node id="GameObjects">
+					<attribute id="Amount" type="int32" value="20" />
+					<attribute id="CastShadow" type="bool" value="False" />
+					<attribute id="Description" type="TranslatedString" handle="he74ca9efg9f38g41f2g9b19g105c3a37b62b" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h523872b9g92a5g4be0g9103g121af5d84ff1" version="1" />
+					<attribute id="DropSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="Icon" type="FixedString" value="Item_LOOT_COINS_Gold_Pile_Small_A" />
+					<attribute id="ImpactSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="InventoryMoveSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="IsInspector" type="bool" value="False" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="0" />
+					<attribute id="MapKey" type="FixedString" value="b4e37209-56cd-4511-9c98-fca4fc83e4fa" />
+					<attribute id="Name" type="LSString" value="Performer_Gold_1" />
+					<attribute id="Opacity" type="float" value="0" />
+					<attribute id="ParentTemplateId" type="FixedString" value="c9e45e5a-f089-480b-ab3a-7f5f76dccc3b" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="PickupSound" type="FixedString" value="156b757e-306d-ed1f-24a5-72070ba8a63a" />
+					<attribute id="ReadinessFlags" type="uint32" value="152" />
+					<attribute id="RecieveDecal" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="OBJ_GoldPile" />
+					<attribute id="Tooltip" type="uint8" value="2" />
+					<attribute id="TreasureOnDestroy" type="bool" value="True" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403208705" />
+					<attribute id="maxStackAmount" type="int32" value="99999" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.1595025 0.500398 0.2099045" />
+									<attribute id="Min" type="fvec3" value="-0.2621195 -0.00241869 -0.1415" />
+									<attribute id="Radius" type="float" value="0.1509255" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+							</children>
+						</node>
+						<node id="InventoryList" />
+						<node id="OnDestroyActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="26" />
+									<children>
+										<node id="Attributes">
+											<attribute id="ActivateSoundEvent" type="FixedString" value="3ea82655-5140-4287-9ab8-794559f182d3" />
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="PlayOnHUD" type="bool" value="False" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="5" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="ExplodeFX" type="FixedString" value="45424856-0461-c3d3-bb8d-8f5ada4cd4c6" />
+											<attribute id="FadeOutDelay" type="float" value="0" />
+											<attribute id="FadeOutFX" type="FixedString" value="" />
+											<attribute id="TargetItemState" type="uint8" value="0" />
+											<attribute id="VisualWithDynamicPhysics" type="FixedString" value="" />
+											<attribute id="templateAfterDestruction" type="FixedString" value="" />
+											<attribute id="visualDestruction" type="FixedString" value="" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="6c6b7cac-113c-42ee-bc46-05567b067a9f" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Amount" type="int32" value="35" />
+					<attribute id="CastShadow" type="bool" value="False" />
+					<attribute id="Description" type="TranslatedString" handle="he74ca9efg9f38g41f2g9b19g105c3a37b62b" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h523872b9g92a5g4be0g9103g121af5d84ff1" version="1" />
+					<attribute id="DropSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="Icon" type="FixedString" value="Item_LOOT_COINS_Gold_Pile_Small_A" />
+					<attribute id="ImpactSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="InventoryMoveSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="IsInspector" type="bool" value="False" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="0" />
+					<attribute id="MapKey" type="FixedString" value="89853ee9-b60b-4035-ab28-54f630652776" />
+					<attribute id="Name" type="LSString" value="Performer_Gold_2" />
+					<attribute id="Opacity" type="float" value="0" />
+					<attribute id="ParentTemplateId" type="FixedString" value="c9e45e5a-f089-480b-ab3a-7f5f76dccc3b" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="PickupSound" type="FixedString" value="156b757e-306d-ed1f-24a5-72070ba8a63a" />
+					<attribute id="ReadinessFlags" type="uint32" value="152" />
+					<attribute id="RecieveDecal" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="OBJ_GoldPile" />
+					<attribute id="Tooltip" type="uint8" value="2" />
+					<attribute id="TreasureOnDestroy" type="bool" value="True" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403208705" />
+					<attribute id="maxStackAmount" type="int32" value="99999" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.1595025 0.500398 0.2099045" />
+									<attribute id="Min" type="fvec3" value="-0.2621195 -0.00241869 -0.1415" />
+									<attribute id="Radius" type="float" value="0.1509255" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+							</children>
+						</node>
+						<node id="InventoryList" />
+						<node id="OnDestroyActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="26" />
+									<children>
+										<node id="Attributes">
+											<attribute id="ActivateSoundEvent" type="FixedString" value="3ea82655-5140-4287-9ab8-794559f182d3" />
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="PlayOnHUD" type="bool" value="False" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="5" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="ExplodeFX" type="FixedString" value="45424856-0461-c3d3-bb8d-8f5ada4cd4c6" />
+											<attribute id="FadeOutDelay" type="float" value="0" />
+											<attribute id="FadeOutFX" type="FixedString" value="" />
+											<attribute id="TargetItemState" type="uint8" value="0" />
+											<attribute id="VisualWithDynamicPhysics" type="FixedString" value="" />
+											<attribute id="templateAfterDestruction" type="FixedString" value="" />
+											<attribute id="visualDestruction" type="FixedString" value="" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="6c6b7cac-113c-42ee-bc46-05567b067a9f" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Amount" type="int32" value="55" />
+					<attribute id="CastShadow" type="bool" value="False" />
+					<attribute id="Description" type="TranslatedString" handle="he74ca9efg9f38g41f2g9b19g105c3a37b62b" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h523872b9g92a5g4be0g9103g121af5d84ff1" version="1" />
+					<attribute id="DropSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="Icon" type="FixedString" value="Item_LOOT_COINS_Gold_Pile_Small_A" />
+					<attribute id="ImpactSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="InventoryMoveSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="IsInspector" type="bool" value="False" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="0" />
+					<attribute id="MapKey" type="FixedString" value="dc17743e-a0a3-4257-bf05-154f0b664cca" />
+					<attribute id="Name" type="LSString" value="Performer_Gold_3" />
+					<attribute id="Opacity" type="float" value="0" />
+					<attribute id="ParentTemplateId" type="FixedString" value="c9e45e5a-f089-480b-ab3a-7f5f76dccc3b" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="PickupSound" type="FixedString" value="156b757e-306d-ed1f-24a5-72070ba8a63a" />
+					<attribute id="ReadinessFlags" type="uint32" value="152" />
+					<attribute id="RecieveDecal" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="OBJ_GoldPile" />
+					<attribute id="Tooltip" type="uint8" value="2" />
+					<attribute id="TreasureOnDestroy" type="bool" value="True" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403208705" />
+					<attribute id="maxStackAmount" type="int32" value="99999" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.1595025 0.500398 0.2099045" />
+									<attribute id="Min" type="fvec3" value="-0.2621195 -0.00241869 -0.1415" />
+									<attribute id="Radius" type="float" value="0.1509255" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+							</children>
+						</node>
+						<node id="InventoryList" />
+						<node id="OnDestroyActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="26" />
+									<children>
+										<node id="Attributes">
+											<attribute id="ActivateSoundEvent" type="FixedString" value="3ea82655-5140-4287-9ab8-794559f182d3" />
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="PlayOnHUD" type="bool" value="False" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="5" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="ExplodeFX" type="FixedString" value="45424856-0461-c3d3-bb8d-8f5ada4cd4c6" />
+											<attribute id="FadeOutDelay" type="float" value="0" />
+											<attribute id="FadeOutFX" type="FixedString" value="" />
+											<attribute id="TargetItemState" type="uint8" value="0" />
+											<attribute id="VisualWithDynamicPhysics" type="FixedString" value="" />
+											<attribute id="templateAfterDestruction" type="FixedString" value="" />
+											<attribute id="visualDestruction" type="FixedString" value="" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="6c6b7cac-113c-42ee-bc46-05567b067a9f" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Amount" type="int32" value="70" />
+					<attribute id="CastShadow" type="bool" value="False" />
+					<attribute id="Description" type="TranslatedString" handle="he74ca9efg9f38g41f2g9b19g105c3a37b62b" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h523872b9g92a5g4be0g9103g121af5d84ff1" version="1" />
+					<attribute id="DropSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="Icon" type="FixedString" value="Item_LOOT_COINS_Gold_Pile_Small_A" />
+					<attribute id="ImpactSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="InventoryMoveSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="IsInspector" type="bool" value="False" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="0" />
+					<attribute id="MapKey" type="FixedString" value="a3459cf7-4cb6-4a80-ae64-1c58bf7ac833" />
+					<attribute id="Name" type="LSString" value="Performer_Gold_4" />
+					<attribute id="Opacity" type="float" value="0" />
+					<attribute id="ParentTemplateId" type="FixedString" value="c9e45e5a-f089-480b-ab3a-7f5f76dccc3b" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="PickupSound" type="FixedString" value="156b757e-306d-ed1f-24a5-72070ba8a63a" />
+					<attribute id="ReadinessFlags" type="uint32" value="152" />
+					<attribute id="RecieveDecal" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="OBJ_GoldPile" />
+					<attribute id="Tooltip" type="uint8" value="2" />
+					<attribute id="TreasureOnDestroy" type="bool" value="True" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403208705" />
+					<attribute id="maxStackAmount" type="int32" value="99999" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.1595025 0.500398 0.2099045" />
+									<attribute id="Min" type="fvec3" value="-0.2621195 -0.00241869 -0.1415" />
+									<attribute id="Radius" type="float" value="0.1509255" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+							</children>
+						</node>
+						<node id="InventoryList" />
+						<node id="OnDestroyActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="26" />
+									<children>
+										<node id="Attributes">
+											<attribute id="ActivateSoundEvent" type="FixedString" value="3ea82655-5140-4287-9ab8-794559f182d3" />
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="PlayOnHUD" type="bool" value="False" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="5" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="ExplodeFX" type="FixedString" value="45424856-0461-c3d3-bb8d-8f5ada4cd4c6" />
+											<attribute id="FadeOutDelay" type="float" value="0" />
+											<attribute id="FadeOutFX" type="FixedString" value="" />
+											<attribute id="TargetItemState" type="uint8" value="0" />
+											<attribute id="VisualWithDynamicPhysics" type="FixedString" value="" />
+											<attribute id="templateAfterDestruction" type="FixedString" value="" />
+											<attribute id="visualDestruction" type="FixedString" value="" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="6c6b7cac-113c-42ee-bc46-05567b067a9f" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="Amount" type="int32" value="90" />
+					<attribute id="CastShadow" type="bool" value="False" />
+					<attribute id="Description" type="TranslatedString" handle="he74ca9efg9f38g41f2g9b19g105c3a37b62b" version="1" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h523872b9g92a5g4be0g9103g121af5d84ff1" version="1" />
+					<attribute id="DropSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="Icon" type="FixedString" value="Item_LOOT_COINS_Gold_Pile_Small_A" />
+					<attribute id="ImpactSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="InventoryMoveSound" type="FixedString" value="a2e61cd2-fc08-5baa-d73f-348251f325ad" />
+					<attribute id="IsInspector" type="bool" value="False" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="LevelOverride" type="int32" value="0" />
+					<attribute id="MapKey" type="FixedString" value="49c87a88-bc48-4acc-9179-5563d71af6ec" />
+					<attribute id="Name" type="LSString" value="Performer_Gold_5" />
+					<attribute id="Opacity" type="float" value="0" />
+					<attribute id="ParentTemplateId" type="FixedString" value="c9e45e5a-f089-480b-ab3a-7f5f76dccc3b" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="PickupSound" type="FixedString" value="156b757e-306d-ed1f-24a5-72070ba8a63a" />
+					<attribute id="ReadinessFlags" type="uint32" value="152" />
+					<attribute id="RecieveDecal" type="bool" value="False" />
+					<attribute id="Stats" type="FixedString" value="OBJ_GoldPile" />
+					<attribute id="Tooltip" type="uint8" value="2" />
+					<attribute id="TreasureOnDestroy" type="bool" value="True" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403208705" />
+					<attribute id="maxStackAmount" type="int32" value="99999" />
+					<children>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.319005 0.500398 0.419809" />
+									<attribute id="Min" type="fvec3" value="-0.524239 -0.00241869 -0.283" />
+									<attribute id="Radius" type="float" value="0.301851" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.502817" />
+									<attribute id="Max" type="fvec3" value="0.1595025 0.500398 0.2099045" />
+									<attribute id="Min" type="fvec3" value="-0.2621195 -0.00241869 -0.1415" />
+									<attribute id="Radius" type="float" value="0.1509255" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+							</children>
+						</node>
+						<node id="InventoryList" />
+						<node id="OnDestroyActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="26" />
+									<children>
+										<node id="Attributes">
+											<attribute id="ActivateSoundEvent" type="FixedString" value="3ea82655-5140-4287-9ab8-794559f182d3" />
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="PlayOnHUD" type="bool" value="False" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="5" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="ExplodeFX" type="FixedString" value="45424856-0461-c3d3-bb8d-8f5ada4cd4c6" />
+											<attribute id="FadeOutDelay" type="float" value="0" />
+											<attribute id="FadeOutFX" type="FixedString" value="" />
+											<attribute id="TargetItemState" type="uint8" value="0" />
+											<attribute id="VisualWithDynamicPhysics" type="FixedString" value="" />
+											<attribute id="templateAfterDestruction" type="FixedString" value="" />
+											<attribute id="visualDestruction" type="FixedString" value="" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="6c6b7cac-113c-42ee-bc46-05567b067a9f" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="322"/>
+	<region id="Feats">
+		<node id="root">
+			<children>
+				<node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="RitualCaster"/>
+                    <attribute id="PassivesAdded" type="LSString" value="RitualCaster_FreeSpells;RitualCaster_SpellSlotRestoration_1;RitualCaster_SpellSlotRestoration_2;RitualCaster_SpellSlotRestoration_3"/>
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(54634207-d1dc-4d17-ac09-2ded104bec9d,2,0,,,,AlwaysPrepared);SelectPassives(c78023b8-877d-4bc2-abf4-5ba6f204027a,1)"/>
+                    <attribute id="UUID" type="guid" value="f3370916-6b35-4c5b-af36-19ca888cb43e"/>
+				</node>
+				<node id="Feat">
+					<attribute id="Name" type="FixedString" value="SYR_DeadlyAlacrity"/>
+					<attribute id="PassivesAdded" type="LSString" value="SYR_Feat_DeadlyAlacrity_Passive"/>
+					<!-- <attribute id="Selectors" type="LSString" value="SelectAbilities(404cecb5-77e7-404a-b7ce-1f9427bab6f1,1,1)"/> -->
+					<attribute id="UUID" type="guid" value="173e3489-1346-42d5-b5d9-a147443418a5"/>
+				</node>
+				<node id="Feat">
+                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
+                    <attribute id="Name" type="FixedString" value="SkeletonCrewFeat"/>
+                    <!-- <attribute id="PassivesAdded" type="LSString" value="Valkrana_SkeletonCrew_Feat_Passive;Valkrana_SkeletonCrew_Toggle"/> -->
+                    <attribute id="PassivesAdded" type="LSString" value=""/>
+                    <attribute id="PassivesRemoved" type="LSString" value=""/>
+                    <attribute id="Requirements" type="LSString" value=""/>
+                    <attribute id="Selectors" type="LSString" value=""/>
+                    <attribute id="UUID" type="guid" value="56c6dae7-69a2-498b-bd5a-b60de0165562"/>
+                </node>
+			</children>
+		</node>
+	</region>
+</save>

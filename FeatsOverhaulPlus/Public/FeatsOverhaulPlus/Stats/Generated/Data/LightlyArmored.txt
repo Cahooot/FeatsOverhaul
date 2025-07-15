@@ -1,0 +1,28 @@
+// Updated description text
+new entry "LightlyArmored"
+type "PassiveData"
+data "DisplayName" "h7d111bb2c396488ba644afd9b4e62060ge39;1"
+data "Description" "h20e3546c6b0144fd8f1fb7eb4981e1f52b09;1"
+data "DescriptionParams" "1"
+data "Icon" "PassiveFeature_LightlyArmored"
+data "Properties" "Highlighted"
+data "Boosts" "Proficiency(LightArmor)"
+
+// Ability score improvements through passives + giving +1 saving throw bonus for selected ability
+new entry "LightlyArmored_Strength"
+type "PassiveData"
+data "DisplayName" "hc961c61eged64g4cdegac78gead899f4c561;1"
+data "Description" "hf51dd462gb417g4b3bg9abegb841dfb988a7;1"
+data "DescriptionParams" "1"
+data "Icon" "GenericIcon_Intent_Buff"
+data "Properties" "IsHidden"
+data "Boosts" "Ability(Strength, 1);RollBonus(SavingThrow,1,Strength)"
+
+new entry "LightlyArmored_Dexterity"
+type "PassiveData"
+data "DisplayName" "hd4931d2fgadcbg47edga3e7ga9ebde78159f;1"
+data "Description" "h1c4db49egc213g4be2g843dga5c4a9b3389c;1"
+data "DescriptionParams" "1"
+data "Icon" "GenericIcon_Intent_Buff"
+data "Properties" "IsHidden"
+data "Boosts" "Ability(Dexterity, 1);RollBonus(SavingThrow,1,Dexterity)"
