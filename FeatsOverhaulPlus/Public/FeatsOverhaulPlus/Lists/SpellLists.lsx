@@ -16,7 +16,7 @@
         </node>
         <node id="SpellList">
           <attribute id="Name" type="FixedString" value="SpellSniperAttackSpells" />
-          <attribute id="Spells" type="LSString" value="Target_ChillTouch;Projectile_EldritchBlast;Projectile_FireBolt;Target_Frostbite;Projectile_IllusionaryDart;Target_LightningLure;Projectile_RayOfFrost;Projectile_RockSlam;Target_ShockingGrasp;Target_SonicBlast;Target_ThornWhip;Target_WaterBullet" />
+          <attribute id="Spells" type="LSString" value="Target_ChillTouch;Projectile_EldritchBlast;Projectile_FireBolt;Target_Frostbite;Projectile_IllusionaryDart;Target_LightningLure;Projectile_RayOfFrost;Projectile_RockSlam;Target_ShockingGrasp;Target_SonicBlast;SD_Projectile_StarryWisp;Target_ThornWhip;Target_WaterBullet" />
           <attribute id="UUID" type="guid" value="12e92350-3adb-4b2c-a59c-f012fe497d32" />
         </node>
       </children>
