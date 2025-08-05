@@ -1,0 +1,37 @@
+// Remove ability score improvement cap of 20
+
+new entry "Resilient_Charisma"
+type "PassiveData"
+using "Resilient_Charisma"
+// data "Boosts" "Ability(Charisma,1,20);ProficiencyBonus(SavingThrow,Charisma)"
+data "Boosts" "Ability(Charisma,1);ProficiencyBonus(SavingThrow,Charisma)"
+
+new entry "Resilient_Constitution"
+type "PassiveData"
+using "Resilient_Constitution"
+// data "Boosts" "Ability(Constitution,1,20);ProficiencyBonus(SavingThrow,Constitution)"
+data "Boosts" "Ability(Constitution,1);ProficiencyBonus(SavingThrow,Constitution)"
+
+new entry "Resilient_Dexterity"
+type "PassiveData"
+using "Resilient_Dexterity"
+// data "Boosts" "Ability(Dexterity,1,20);ProficiencyBonus(SavingThrow,Dexterity)"
+data "Boosts" "Ability(Dexterity,1);ProficiencyBonus(SavingThrow,Dexterity)"
+
+new entry "Resilient_Intelligence"
+type "PassiveData"
+using "Resilient_Intelligence"
+// data "Boosts" "Ability(Intelligence,1,20);ProficiencyBonus(SavingThrow,Intelligence)"
+data "Boosts" "Ability(Intelligence,1);ProficiencyBonus(SavingThrow,Intelligence)"
+
+new entry "Resilient_Strength"
+type "PassiveData"
+using "Resilient_Strength"
+// data "Boosts" "Ability(Strength,1,20);ProficiencyBonus(SavingThrow,Strength)"
+data "Boosts" "Ability(Strength,1);ProficiencyBonus(SavingThrow,Strength)"
+
+new entry "Resilient_Wisdom"
+type "PassiveData"
+using "Resilient_Wisdom"
+// data "Boosts" "Ability(Wisdom,1,20);ProficiencyBonus(SavingThrow,Wisdom)"
+data "Boosts" "Ability(Wisdom,1);ProficiencyBonus(SavingThrow,Wisdom)"
