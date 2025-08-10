@@ -1,3 +1,5 @@
+// ==================================== Vanilla Defensive Duellist ====================================
+
 // Change name of passive to "Duellist: Defence" and have it also unlock the spell to remove Versatile property from your weapon (under this passive as it doesn't have any BoostConditions)
 new entry "DefensiveDuelist"
 type "PassiveData"
@@ -9,6 +11,33 @@ data "Icon" "PassiveFeature_DefensiveDualist"
 data "PriorityOrder" "3"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockInterrupt(Interrupt_DefensiveDuelist);Ability(Dexterity,1);UnlockSpell(CHT_Duelist_RemoveVersatile)"
+
+// Allow using Defensive Duellist interrupt while invisible 
+new entry "Interrupt_DefensiveDuelist"
+type "InterruptData"
+using "Interrupt_DefensiveDuelist"
+// Defensive Duellist
+// data "DisplayName" "h30c13848ga882g4694g80ceg12693886a1c2;1"
+// When attacked with a melee attack, add your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt; to your &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt;, possibly causing attacks to miss.
+// data "Description" "h02446f84g87f6g49b1g919bged15f84c0e66;4"
+// data "DescriptionParams" "ProficiencyBonus"
+// Requires a &lt;LSTag Tooltip="Finesse"&gt;Finesse Weapon&lt;/LSTag&gt; you are &lt;LSTag Tooltip="Proficiency"&gt;Proficient&lt;/LSTag&gt; in.
+// data "ExtraDescription" "hfd7efab4gf066g4701gb7acg29e669b2e875;1"
+// data "Icon" "PassiveFeature_DefensiveDualist"
+// data "InterruptContext" "OnPostRoll"
+// data "InterruptContextScope" "Self"
+// data "Container" "YesNoDecision"
+// data "Conditions" "IsAbleToReact(context.Observer) and HasInterruptedAttack() and Self(context.Target,context.Observer) and not AnyEntityIsItem() and IsMeleeAttack() and HasWeaponProperty(WeaponProperties.Finesse, GetActiveWeapon(context.Observer)) and IsProficientWith(context.Observer, GetActiveWeapon(context.Observer)) and IsFlatValueInterruptInteresting(context.Observer.ProficiencyBonus, context.Source)"
+data "Conditions" "(Player(context.Observer) or not HasStatus('SG_Invisible',context.Observer)) and IsAbleToReact(context.Observer) and HasInterruptedAttack() and Self(context.Target,context.Observer) and not AnyEntityIsItem() and IsMeleeAttack() and HasWeaponProperty(WeaponProperties.Finesse, GetActiveWeapon(context.Observer)) and IsProficientWith(context.Observer, GetActiveWeapon(context.Observer)) and IsFlatValueInterruptInteresting(context.Observer.ProficiencyBonus, context.Source)"
+// data "Properties" "AdjustRoll(OBSERVER_OBSERVER,0-ProficiencyBonus);ApplyStatus(SWAP,PASSIVE_DEFENSIVE_DUELIST,100,0);ApplyStatus(OBSERVER_OBSERVER,INTERRUPT_DEFENSIVE_DUELIST,100,0)"
+// data "Cost" "ReactionActionPoint:1"
+// data "InterruptDefaultValue" "Enabled"
+data "EnableCondition" "(not HasStatus('SG_Polymorph') or Goon_IsUnrestrictedPolymorphStatus()) and WieldingFinesseWeaponInSpecificHand(context.Source, false)"
+// data "EnableContext" "OnStatusApplied;OnStatusRemoved"
+data "EnableContext" "OnStatusApplied;OnStatusRemoved;OnEquip"
+data "InterruptFlags" "InterruptWhileInvisible"
+
+// ==================================== New Duellist: Precision passive ====================================
 
 // New passive for when equipping a Finesse weapon in one hand with off-hand empty
 new entry "DefensiveDuelist_Precision"
@@ -22,6 +51,8 @@ data "Properties" "Highlighted"
 data "BoostContext" "OnCreate;OnEquip"
 data "BoostConditions" "HasWeaponProperty(WeaponProperties.Finesse, GetActiveWeapon(context.Observer)) and not HasWeaponProperty(WeaponProperties.Versatile, GetActiveWeapon(context.Observer)) and IsProficientWith(context.Observer, GetActiveWeapon(context.Observer)) and IsOffHandSlotEmpty()"
 data "Boosts" "RollBonus(MeleeWeaponAttack, ProficiencyBonus);IF(IsMeleeWeaponAttack()):ReduceCriticalAttackThreshold(1)"
+
+// ==================================== New spell to remove Versatile property ====================================
 
 // New spell given to remove Versatile property from a Versatile + Finesse weapon (so it can be used with the new Duellist: Precision passive)
 new entry "CHT_Duelist_RemoveVersatile"
@@ -105,3 +136,4 @@ type "StatusData"
 data "StatusType" "BOOST"
 data "StackId" "CHT_DUELIST_REMOVED_VERSATILE_CANCEL_HELPER"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
