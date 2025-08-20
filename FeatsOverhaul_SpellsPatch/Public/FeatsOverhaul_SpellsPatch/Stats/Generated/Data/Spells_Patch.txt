@@ -1,0 +1,9 @@
+// ======================================== Spell Sniper ========================================
+
+// Spell list LSTag for Spell Sniper: Empowered Spells with spells from mods included
+new entry "CHT_SPELLSNIPER_SPELLLIST"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CHT_SPELLSNIPER_SPELLLIST"
+// data "Description" "h392f9affgf28dg4171g9940g99dab65d1621;1"
+data "Description" "h16780934g6141g45dfg9661gad68374cfbe4;1"
