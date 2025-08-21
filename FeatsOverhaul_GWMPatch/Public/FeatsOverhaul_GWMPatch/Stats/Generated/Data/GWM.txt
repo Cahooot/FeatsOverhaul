@@ -1,0 +1,8 @@
+// ==================================== Great Weapon Master ====================================
+
+// Bonus damage now also applies to spells that are melee weapon attacks but don't use weapon damage, such as Pommel Strike
+new entry "GreatWeaponMaster_BonusDamage"
+type "PassiveData"
+using "GreatWeaponMaster_BonusDamage"
+data "Boosts" "IF(GreatWeaponMaster(context.Source) and IsMeleeWeaponAttack() and HasPassive('GreatWeaponMaster_BonusDamage',context.Source)):RollBonus(MeleeWeaponAttack, LevelMapValue(CHT_GWM_SS_AttackPenalty));IF(GreatWeaponMaster(context.Source) and IsMeleeWeaponAttack() and HasPassive('GreatWeaponMaster_BonusDamage',context.Source)):DamageBonus(LevelMapValue(CHT_GWM_SS_Damage))"
+

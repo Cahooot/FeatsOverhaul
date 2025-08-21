@@ -1,0 +1,126 @@
+// =========================== Oath of Divine Tempest - Paladin Subclass ===========================
+
+// Shocking Blade
+new entry "Target_ShockingBlade"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ShockingBlade"
+// data "SpellSuccess" "IF(CharacterLevelGreaterThan(4)):DealDamage(LevelMapValue(ShockingBlade),Lightning);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);ApplyStatus(MAG_CHARGED_LIGHTNING_AURA_ELECTRIFIED,100,1);ApplyStatus(STORMSTRIKER_BLOCK,100,1);"
+data "SpellSuccess" "IF(CharacterLevelGreaterThan(4)):DealDamage(LevelMapValue(ShockingBlade),Lightning,Magical,,0,,true);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);ApplyStatus(MAG_CHARGED_LIGHTNING_AURA_ELECTRIFIED,100,1);ApplyStatus(STORMSTRIKER_BLOCK,100,1);"
+
+// Stormstriker Slash
+new entry "Target_StormstrikerSlash"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_StormstrikerSlash"
+// data "SpellSuccess" "IF(not CharacterLevelGreaterThan(4) and Character()):ApplyStatus(STORM_STRIKER,100,1);IF(CharacterLevelGreaterThan(4) and not CharacterLevelGreaterThan(10) and Character()):ApplyStatus(STORM_STRIKER_5,100,1);IF(CharacterLevelGreaterThan(10) and Character()):ApplyStatus(STORM_STRIKER_11,100,1);IF(CharacterLevelGreaterThan(4)):DealDamage(LevelMapValue(StormstrikeSlash),Lightning);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);ApplyStatus(STORMSTRIKER_BLOCK,100,1);"
+data "SpellSuccess" "IF(not CharacterLevelGreaterThan(4) and Character()):ApplyStatus(STORM_STRIKER,100,1);IF(CharacterLevelGreaterThan(4) and not CharacterLevelGreaterThan(10) and Character()):ApplyStatus(STORM_STRIKER_5,100,1);IF(CharacterLevelGreaterThan(10) and Character()):ApplyStatus(STORM_STRIKER_11,100,1);IF(CharacterLevelGreaterThan(4)):DealDamage(LevelMapValue(StormstrikeSlash),Lightning,Magical,,0,,true);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);ApplyStatus(STORMSTRIKER_BLOCK,100,1);"
+
+// =========================== Lightbringer Reforced - Paladin Overhaul and Smite Rework ===========================
+// All judgments
+
+// Searing
+new entry "SearingJudgmentEffect"
+type "PassiveData"
+using "SearingJudgmentEffect"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(SEARING_FLAMES, 100, 5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(1d6,Fire);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,SEARING_JUDGMENT)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(SEARING_FLAMES, 100, 5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(1d6,Fire,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,SEARING_JUDGMENT)"
+
+new entry "SearingJudgmentEffect2"
+type "PassiveData"
+using "SearingJudgmentEffect2"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(SEARING_FLAMES, 100, 5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Searing_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Fire);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,SEARING_JUDGMENT_2)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(SEARING_FLAMES, 100, 5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Searing_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Fire,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,SEARING_JUDGMENT_2)"
+
+new entry "SearingJudgmentEffect3"
+type "PassiveData"
+using "SearingJudgmentEffect3"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(SEARING_FLAMES, 100, 5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Searing_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Fire);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,SEARING_JUDGMENT_3)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(SEARING_FLAMES, 100, 5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Searing_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Fire,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,SEARING_JUDGMENT_3)"
+
+// Thunderous
+new entry "ThunderousJudgmentEffect"
+type "PassiveData"
+using "ThunderousJudgmentEffect"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE_THUNDEROUS_SMITE, 100, 1);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(1d6,Thunder);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,THUNDEROUS_JUDGMENT)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE_THUNDEROUS_SMITE, 100, 1);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(1d6,Thunder,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,THUNDEROUS_JUDGMENT)"
+
+new entry "ThunderousJudgmentEffect2"
+type "PassiveData"
+using "ThunderousJudgmentEffect2"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE_THUNDEROUS_SMITE, 100, 1);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Thunderous_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Thunder);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,THUNDEROUS_JUDGMENT_2)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE_THUNDEROUS_SMITE, 100, 1);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Thunderous_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Thunder,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,THUNDEROUS_JUDGMENT_2)"
+
+new entry "ThunderousJudgmentEffect3"
+type "PassiveData"
+using "ThunderousJudgmentEffect3"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE_THUNDEROUS_SMITE, 100, 1);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Thunderous_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Thunder);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,THUNDEROUS_JUDGMENT_3)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Strength, SourceSpellDC())):ApplyStatus(PRONE_THUNDEROUS_SMITE, 100, 1);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Thunderous_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Thunder,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,THUNDEROUS_JUDGMENT_3)"
+
+// Wrathful
+new entry "WrathfulJudgmentEffect"
+type "PassiveData"
+using "WrathfulJudgmentEffect"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(FRIGHTENED,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(1d6,Psychic);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,WRATHFUL_JUDGMENT)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(FRIGHTENED,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(1d6,Psychic,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,WRATHFUL_JUDGMENT)"
+
+new entry "WrathfulJudgmentEffect2"
+type "PassiveData"
+using "WrathfulJudgmentEffect2"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(FRIGHTENED,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Wrathful_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Psychic);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,WRATHFUL_JUDGMENT_2)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(FRIGHTENED,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Wrathful_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Psychic,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,WRATHFUL_JUDGMENT_2)"
+
+new entry "WrathfulJudgmentEffect3"
+type "PassiveData"
+using "WrathfulJudgmentEffect3"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(FRIGHTENED,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Wrathful_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Psychic);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,WRATHFUL_JUDGMENT_3)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(FRIGHTENED,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Wrathful_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Psychic,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,WRATHFUL_JUDGMENT_3)"
+
+// Blinding
+new entry "BlindingJudgmentEffect"
+type "PassiveData"
+using "BlindingJudgmentEffect"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(DIVINE_FLARE,100,5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Blinding_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Radiant);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,BLINDING_JUDGMENT)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(DIVINE_FLARE,100,5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Blinding_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Radiant,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,BLINDING_JUDGMENT)"
+
+new entry "BlindingJudgmentEffect2"
+type "PassiveData"
+using "BlindingJudgmentEffect2"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(DIVINE_FLARE,100,5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Blinding_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Radiant);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,BLINDING_JUDGMENT_2)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Constitution, SourceSpellDC())):ApplyStatus(DIVINE_FLARE,100,5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Blinding_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Radiant,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,BLINDING_JUDGMENT_2)"
+
+// Rallying
+new entry "RallyingJudgmentEffect"
+type "PassiveData"
+using "RallyingJudgmentEffect"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Rallying_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Radiant);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,RALLYING_JUDGMENT)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Rallying_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(2d6,Radiant,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,RALLYING_JUDGMENT)"
+
+new entry "RallyingJudgmentEffect2"
+type "PassiveData"
+using "RallyingJudgmentEffect2"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Rallying_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Radiant);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,RALLYING_JUDGMENT_3)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Rallying_Judgment_2);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Radiant,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,RALLYING_JUDGMENT_3)"
+
+// Banishing
+new entry "BanishingJudgmentEffect"
+type "PassiveData"
+using "BanishingJudgmentEffect"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Charisma, SourceSpellDC())):ApplyStatus(BANISHED, 100, 5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Banishing_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Force);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,BANISHING_JUDGMENT)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Charisma, SourceSpellDC())):ApplyStatus(BANISHED, 100, 5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Banishing_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Force,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,BANISHING_JUDGMENT)"
+
+// Compelling
+new entry "ChallengingJudgmentEffect"
+type "PassiveData"
+using "ChallengingJudgmentEffect"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(DIVINE_RETRIBUTION,100,5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Challenging_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Radiant);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,CHALLENGING_JUDGMENT)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite() and not SavingThrow(Ability.Wisdom, SourceSpellDC())):ApplyStatus(DIVINE_RETRIBUTION,100,5);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):CreateExplosion(Projectile_Challenging_Judgment);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):DealDamage(3d6,Radiant,Magical,,0,,true);IF(context.HasContextFlag(StatsFunctorContext.OnDamage) and IsSmite()):RemoveStatus(SELF,CHALLENGING_JUDGMENT)"
+
+// =========================== Righteous Blade (Cantrip for Paladins and Clerics) ===========================
+
+new entry "Target_RighteousBlade"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_RighteousBlade"
+// data "SpellSuccess" "IF(CharacterLevelGreaterThan(4)):DealDamage(LevelMapValue(BoomingBlade),Radiant);IF(Character() and not SavingThrow(Ability.Constitution, HybridCasterWeaponActionDC())):ApplyStatus(DAZED,100,1);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);ApplyStatus(BOOMINGBLADE_BLOCK,100,1);"
+data "SpellSuccess" "IF(CharacterLevelGreaterThan(4)):DealDamage(LevelMapValue(BoomingBlade),Radiant,Magical,,0,,true);IF(Character() and not SavingThrow(Ability.Constitution, HybridCasterWeaponActionDC())):ApplyStatus(DAZED,100,1);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);ApplyStatus(BOOMINGBLADE_BLOCK,100,1);"
