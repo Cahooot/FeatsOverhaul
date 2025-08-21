@@ -20,6 +20,19 @@ data "Icon" "PassiveFeature_Generic_Threat"
 data "Properties" "Highlighted"
 data "Boosts" "Initiative(2);StatusImmunity(SURPRISED);IF(CharacterLevelGreaterThan(4)):Initiative(1);IF(CharacterLevelGreaterThan(8)):Initiative(1);IF(CharacterLevelGreaterThan(12)):Initiative(1);IF(CharacterLevelGreaterThan(16)):Initiative(1);StatusImmunity(SURPRISED);ProficiencyBonus(Skill,Perception)"
 
+// ==================================== Dual Wielder ====================================
+
+// Dummy status for the tooltip for FightingStyle_TwoWeaponFighting in the feats selection screen, since Passive-type LSTags don't work in the feats selection screen anymore for some reason
+new entry "CHT_FIGHTINGSTYLE_TWOWEAPONFIGHTING"
+type "StatusData"
+data "StatusType" "BOOST"
+// Two-Weapon Fighting
+data "DisplayName" "hdcfca7a2ga47fg4ea3g956ag264e0810b8ba;2"
+// When you make an <LSTag Tooltip="AttackRoll">attack</LSTag> with your off-hand weapon, you can add your <LSTag Tooltip="AbilityModifier">Ability Modifier</LSTag> to the damage of the attack.
+data "Description" "h5153f9f3g7dcbg45d9gae1bgd19f398959a2;4"
+data "Icon" "PassiveFeature_FightingStyle_TwoWeaponFighting"
+data "StackId" "CHT_FIGHTINGSTYLE_TWOWEAPONFIGHTING"
+
 // ==================================== Durable ====================================
 
 // Now gives hp regen if you are at 60% or less hp
@@ -37,7 +50,7 @@ data "StatsFunctors" "IF(HasHPPercentageEqualOrLessThan(60)):RegainHitPoints(Pro
 
 // ==================================== Great Weapon Master ====================================
 
-// Damage bonus and attack roll penalty now scale with proficiency bonus. Bonus damage now also applies to spells that are melee weapon attacks but don't use weapon damage such as Pommel Strike
+// Damage bonus and attack roll penalty now scale with proficiency bonus.
 new entry "GreatWeaponMaster_BonusDamage"
 type "PassiveData"
 data "DisplayName" "h307c2db0ge721g3c9cg4b6fga18f158a62c4;1"
@@ -46,7 +59,7 @@ data "DescriptionParams" "1"
 data "Icon" "PassiveFeature_GreatWeaponMaster_BonusDamage"
 data "PriorityOrder" "1"
 data "Properties" "IsToggled;ToggledDefaultAddToHotbar;ToggledDefaultOn;Highlighted"
-data "Boosts" "IF(GreatWeaponMaster(context.Source) and IsMeleeWeaponAttack() and HasPassive('GreatWeaponMaster_BonusDamage',context.Source)):RollBonus(MeleeWeaponAttack, LevelMapValue(CHT_GWM_SS_AttackPenalty));IF(GreatWeaponMaster(context.Source) and IsMeleeWeaponAttack() and HasPassive('GreatWeaponMaster_BonusDamage',context.Source)):DamageBonus(LevelMapValue(CHT_GWM_SS_Damage))"
+data "Boosts" "IF(GreatWeaponMaster(context.Source) and IsMeleeWeaponAttack() and HasPassive('GreatWeaponMaster_BonusDamage',context.Source)):RollBonus(MeleeWeaponAttack, LevelMapValue(CHT_GWM_SS_AttackPenalty));IF(GreatWeaponMaster(context.Source)):CharacterWeaponDamage(LevelMapValue(CHT_GWM_SS_Damage))"
 
 // ==================================== Sentinel ====================================
 
