@@ -9,6 +9,9 @@ INITSECTION
 //  - "Bard_Perform_ThePower": dynamic, energetic
 //  - "Bard_Perform_Stargazing": mellow, emotive
 //  - "Bard_Perform_BardDance": traditional pub music
+//  - "Bard_Perform_MainTheme": DLC song #1
+//  - "Bard_Perform_SingForMe": DLC song #2
+//  - "Bard_Perform_QueensHighSeas": DLC song #3
 
 // Private stuff
 
@@ -39,6 +42,11 @@ DB_Bard_InstrumentRootToSpell((ITEMROOT)TOOL_GEN_Music_Flute_A_848ad8dc-59f3-464
 DB_Bard_InstrumentRootToSpell((ITEMROOT)TOOL_GEN_Music_Guitar_Lute_A_8f98a7e7-c773-4b58-9127-5cf79b9206e9,"_Lute");
 DB_Bard_InstrumentRootToSpell((ITEMROOT)TOOL_GEN_Music_Lyre_A_13739f15-7366-4d7f-9926-991e98b9e964,"_Lyre");
 DB_Bard_InstrumentRootToSpell((ITEMROOT)TOOL_GEN_Music_Violin_A_aca5d144-773b-42ba-aca1-6903c60c418c,"_Violin");
+
+// Mapping proper song names to technical names from the stats
+DB_Bard_DLC_SongsMapping("Bard_Perform_MainTheme", "Bard_Perform_DOS2_1");
+DB_Bard_DLC_SongsMapping("Bard_Perform_SingForMe", "Bard_Perform_DOS2_2");
+DB_Bard_DLC_SongsMapping("Bard_Perform_QueensHighSeas", "Bard_Perform_DOS2_3");
 KBSECTION
 //REGION Trigger the perform disturbance
 IF
@@ -323,6 +331,8 @@ THEN
 NOT DB_CRIME_MusicalPerformance_Flourish(_ID,_NPC,_Performer);
 ObjectTimerCancel(_NPC,"CRIME_BardReactions_Flourish_Timer");
 
+// ============================== START OF MODIFIED SECTION (COIN TOSS) ==============================
+
 // If performer doesn't have Performer feat: give vanilla amount of gold
 IF
 ObjectTimerFinished((CHARACTER)_NPC,"CRIME_BardReactions_Flourish_Timer")
@@ -481,6 +491,10 @@ THEN
 UseSpellAtPosition(_NPC,"Projectile_GEB_Perform_TossCoin_Upgrade_5",_X,_Y,_Z);
 DB_CRIME_MusicalPerformance_TossCoin((CHARACTER)_NPC,(CHARACTER)_Performer);
 
+// ============================== END OF MODIFIED SECTION (COIN TOSS) ==============================
+
+// ============================== START OF MODIFIED SECTION (PROC_CRIME_MusicalPerformance_TossedCoin) ==============================
+
 // If performer doesn't have Performer feat
 IF
 CastSpellFailed(_NPC,"Projectile_GEB_Perform_TossCoin",_,_,_)
@@ -578,6 +592,8 @@ THEN
 NOT DB_CRIME_MusicalPerformance_TossCoin((CHARACTER)_NPC,(CHARACTER)_Performer);
 PROC_CRIME_MusicalPerformance_TossedCoin((CHARACTER)_NPC,(CHARACTER)_Performer);
 
+// ============================== END OF MODIFIED SECTION (PROC_CRIME_MusicalPerformance_TossedCoin) ==============================
+
 PROC
 PROC_CRIME_MusicalPerformance_TossedCoin((CHARACTER)_,(CHARACTER)_)
 THEN
@@ -629,11 +645,36 @@ DB_CRIME_MusicalPerformance_Status("PERFORM_POSITIVE",_DisturbanceName,"OnStatus
 AND
 DB_CRIME_MusicalPerformance_Status("PERFORM_POSITIVE",_NPCJoningDisturbance,"OnMainPerformerStart")
 AND
+QRY_CRIME_MusicalPerformance_CorrectSpellInfix(_SpellInfix)
+AND
+DB_QRYRTN_CRIME_MusicalPerformance_CorrectedSpellInfix(_CorrectedSpellInfix)
+AND
 CrimeGetNewID(_CrimeID)
 THEN
-DB_CRIME_MusicalPerformanceSpell(_CrimeID,_SpellInfix);
+DB_CRIME_MusicalPerformanceSpell(_CrimeID,_CorrectedSpellInfix);
 DB_CRIME_MusicalPerformance(_CrimeID,_BardPlayer,_NPCJoningDisturbance);
 PROC_CharacterRegisterCrime(_BardPlayer,_NPCJoningDisturbance,_BardPlayer,NULL_00000000-0000-0000-0000-000000000000,_CrimeID);
+
+QRY
+QRY_CRIME_MusicalPerformance_CorrectSpellInfix((STRING)_SpellInfix)
+AND
+DB_QRYRTN_CRIME_MusicalPerformance_CorrectedSpellInfix(_OldSpellInfix)
+THEN
+NOT DB_QRYRTN_CRIME_MusicalPerformance_CorrectedSpellInfix(_OldSpellInfix);
+
+QRY
+QRY_CRIME_MusicalPerformance_CorrectSpellInfix((STRING)_SpellInfix)
+AND
+DB_Bard_DLC_SongsMapping(_SpellInfix, _UpdatedSpellInfix)
+THEN
+DB_QRYRTN_CRIME_MusicalPerformance_CorrectedSpellInfix(_UpdatedSpellInfix);
+
+QRY
+QRY_CRIME_MusicalPerformance_CorrectSpellInfix((STRING)_SpellInfix)
+AND
+NOT DB_QRYRTN_CRIME_MusicalPerformance_CorrectedSpellInfix(_)
+THEN
+DB_QRYRTN_CRIME_MusicalPerformance_CorrectedSpellInfix(_SpellInfix);
 
 PROC
 PROC_CRIME_Finished((INTEGER)_CrimeID)
