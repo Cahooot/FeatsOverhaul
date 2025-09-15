@@ -1,3 +1,4 @@
+// =================================== Resilient ===================================
 // Remove ability score improvement cap of 20
 
 new entry "Resilient_Charisma"

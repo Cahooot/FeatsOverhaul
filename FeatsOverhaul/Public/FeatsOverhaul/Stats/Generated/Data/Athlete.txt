@@ -1,4 +1,19 @@
-// Ability score improvement through passives
+// =================================== Athlete: Stand Up ===================================
+
+// new entry "Athlete_StandUp"
+// type "PassiveData"
+// // Athlete: Standing Up
+// data "DisplayName" "h77609175g99f7g4e74g9911g20c6033d4b7d;2"
+// // When you are <LSTag Type="Status" Tooltip="PRONE">Prone</LSTag>, standing up uses only [1] of your <LSTag Tooltip="MovementSpeed">movement speed</LSTag>.
+// data "Description" "h4b8451c4g75dbg48adgb3a2g10cfe99f8585;4"
+// data "DescriptionParams" "Distance(1.5)"
+// data "Icon" "PassiveFeature_Athlete_StandUp"
+// data "PriorityOrder" "1"
+// data "Properties" "Highlighted"
+// data "Boosts" "JumpMaxDistanceMultiplier(1.5)"
+
+// =================================== Ability score improvement through passives ===================================
+
 new entry "Athlete_Strength"
 type "PassiveData"
 data "DisplayName" "hb4fa3f4eg6569g4ee3g83aag1950b06c40f3;1"

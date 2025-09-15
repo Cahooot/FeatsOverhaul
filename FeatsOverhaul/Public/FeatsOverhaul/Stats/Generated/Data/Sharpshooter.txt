@@ -1,0 +1,24 @@
+// =================================== Sharpshooter: All In ===================================
+// Damage bonus and attack roll penalty now scale with proficiency bonus
+
+new entry "Sharpshooter_AllIn"
+type "PassiveData"
+data "DisplayName" "h1bdf58ceg829dgc59bg332dg15f213bfdfc6;1"
+data "Description" "h0aabaab9g8645g917fg5194g04fd1eea2d55;2"
+data "DescriptionParams" "1"
+data "Icon" "PassiveFeature_Sharpshooter_AllIn"
+data "PriorityOrder" "1"
+data "Properties" "IsToggled;ToggledDefaultAddToHotbar;ToggledDefaultOn;Highlighted"
+data "Boosts" "IF(Sharpshooter(context.Source)):RollBonus(RangedWeaponAttack, LevelMapValue(CHT_GWM_SS_AttackPenalty));IF(Sharpshooter(context.Source)):RollBonus(RangedOffHandWeaponAttack, LevelMapValue(CHT_GWM_SS_AttackPenalty));IF(Sharpshooter(context.Source)):CharacterWeaponDamage(LevelMapValue(CHT_GWM_SS_Damage))"
+
+// =================================== Sharpshooter: Low Ground ===================================
+
+// new entry "Sharpshooter_Bonuses"
+// type "PassiveData"
+// // Sharpshooter: Low Ground
+// data "DisplayName" "h9cd48bd6gaaddg480eg9e6cgc3a331a5bbbe;2"
+// // Your <LSTag Tooltip="RangedWeaponAttack">ranged weapon attacks</LSTag> do not receive penalties from <LSTag Tooltip="HighGroundRules">High Ground Rules</LSTag>.
+// data "Description" "hd23ddae5gc8f4g4f67g9eccg3dd49b017602;4"
+// data "Icon" "PassiveFeature_Sharpshooter_Bonuses"
+// data "Properties" "Highlighted"
+// data "Boosts" "IgnoreLowGroundPenalty(RangedWeaponAttack);IgnoreLowGroundPenalty(RangedOffHandWeaponAttack)"

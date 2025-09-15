@@ -1,4 +1,6 @@
+// =================================== Performer ===================================
 // Gives expertise in Acrobatics and Performance now
+
 new entry "Performer"
 type "PassiveData"
 data "DisplayName" "h1ce947e2g5564g4d5bg92bbge681cfca2cd3;1"
@@ -7,7 +9,8 @@ data "Icon" "PassiveFeature_FontOfInspiration"
 data "Properties" "Highlighted"
 data "Boosts" "Proficiency(MusicalInstrument);ProficiencyBonus(Skill,Performance);ExpertiseBonus(Performance);ProficiencyBonus(Skill,Acrobatics);ExpertiseBonus(Acrobatics)"
 
-// Ability score improvements through passives
+// =================================== Ability score improvements through passives ===================================
+
 new entry "Performer_Dexterity"
 type "PassiveData"
 data "DisplayName" "h60085f3e94804b09a718b2eb38aea9ddd00a;1"
@@ -26,7 +29,8 @@ data "Icon" "GenericIcon_Intent_Buff"
 data "Properties" "IsHidden"
 data "Boosts" "Ability(Charisma, 1)"
 
-// Upgraded coin tosses for Performer feat
+// =================================== Upgraded coin tosses for Performer feat ===================================
+
 new entry "Projectile_GEB_Perform_TossCoin_Upgrade_1"
 type "SpellData"
 data "SpellType" "Projectile"

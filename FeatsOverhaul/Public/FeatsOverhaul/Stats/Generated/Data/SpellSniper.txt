@@ -1,4 +1,6 @@
-// Now also low ground penalty for ranged spell attack rolls
+// =================================== Spell Sniper: Arcane Marksmanship ===================================
+// Renamed, and now also low ground penalty for ranged spell attack rolls
+
 new entry "SpellSniper_Critical"
 type "PassiveData"
 data "DisplayName" "hcd18d56dg77c3g407dgb974gd4a27bdd85b1;1"
@@ -7,7 +9,9 @@ data "Icon" "PassiveFeature_SpellSniper_Snipe"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsSpell() and IsSpellAttack()):ReduceCriticalAttackThreshold(1);IgnoreLowGroundPenalty(RangedSpellAttack)"
 
+// =================================== Spell Sniper: Empowered Spells ===================================
 // New passive to give advantage on damage rolls for select list of spells
+
 new entry "SpellSniper_Empowered"
 type "PassiveData"
 data "DisplayName" "h10bed100gba9dg4187gbbffgec83807b26af;1"

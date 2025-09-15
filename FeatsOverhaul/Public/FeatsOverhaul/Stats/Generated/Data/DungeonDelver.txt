@@ -1,4 +1,6 @@
-// Ability score improvements through passives
+// =================================== Dungeon Delver: Expertise ===================================
+// Expertise in more skills and rollbonus bonus to Dexterity saving throws
+
 new entry "DungeonDelver_Expertise"
 type "PassiveData"
 data "DisplayName" "ha35597cdg2bb3g8a2agcfb3g5929b216157b;1"
@@ -7,6 +9,8 @@ data "DescriptionParams" "1"
 data "Icon" "PassiveFeature_DungeonDelver_Perception"
 data "Properties" "Highlighted"
 data "Boosts" "ProficiencyBonus(Skill,Perception);ExpertiseBonus(Perception);ProficiencyBonus(Skill,SleightOfHand);ExpertiseBonus(SleightOfHand);RollBonus(SavingThrow,1,Dexterity)"
+
+// =================================== Ability score improvements through passives ===================================
 
 new entry "DungeonDelver_Dexterity"
 type "PassiveData"

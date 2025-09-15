@@ -1,4 +1,6 @@
+// =================================== Skilled ===================================
 // Updated description text
+
 new entry "Skilled"
 type "PassiveData"
 data "DisplayName" "h2ecfa252g105cg5a7bg42c9g52c3ade16cc1;1"
@@ -6,7 +8,8 @@ data "Description" "hf93d9ef6g1f95g6d4fg6464g41e8244b52f4;2"
 data "Icon" "PassiveFeature_Skilled"
 data "Properties" "Highlighted"
 
-// Ability score improvements through passives
+// =================================== Ability score improvements through passives ===================================
+
 new entry "Skilled_Strength"
 type "PassiveData"
 data "DisplayName" "h19df148648614221a389ddf771f68a6dc616;1"

@@ -1,0 +1,40 @@
+// =================================== Great Weapon Master: Bonus Attack ===================================
+
+// new entry "GreatWeaponMaster_BonusAttack"
+// type "PassiveData"
+// // Great Weapon Master: Bonus Attack
+// data "DisplayName" "h5a8b6c2eg1732g46f1g835cg56abab167ce8;2"
+// // When you land a <LSTag Tooltip="CriticalHit">Critical Hit</LSTag> or kill a target with a <LSTag Tooltip="MeleeWeaponAttack">melee weapon attack</LSTag>, you can make another melee weapon attack as a <LSTag Type="ActionResource" Tooltip="BonusActionPoint">bonus action</LSTag> that turn.
+// data "Description" "h6fe12650gb5c8g41b6gad38gffed5180ee79;2"
+// data "Icon" "PassiveFeature_GreatWeaponMaster_BonusAttack"
+// data "PriorityOrder" "1"
+// data "Properties" "Highlighted"
+// data "StatsFunctorContext" "OnAttack"
+// data "Conditions" "(((not HasStatus('WILDSHAPE_TECHNICAL',context.Target) and HasHPLessThan(1)) and not Ally() and Character()) or (HasDamageEffectFlag(DamageFlags.Critical) and not HasDamageEffectFlag(DamageFlags.Miss) and not Ally() and Character())) and not SpellId('Target_GreatWeaponMaster_BonusAttack') and IsWeaponAttack() and IsMeleeAttack()"
+// data "StatsFunctors" "ApplyStatus(SELF,GREAT_WEAPON_MASTER_BONUS_ATTACK,100,1)"
+
+// new entry "Target_GreatWeaponMaster_BonusAttack"
+// type "SpellData"
+// data "SpellType" "Target"
+// using "Target_MainHandAttack"
+// data "SpellProperties" "RemoveStatus(SELF,GREAT_WEAPON_MASTER_BONUS_ATTACK);GROUND:DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);GROUND:ExecuteWeaponFunctors(MainHand);CastOffhand[GROUND:DealDamage(OffhandMeleeWeapon, OffhandMeleeWeaponDamageType);GROUND:ExecuteWeaponFunctors(OffHand)];IF(not Player(context.Source)):ApplyStatus(SELF,AI_HELPER_EXTRAATTACK,100,1)"
+// data "Icon" "PassiveAction_GreatWeaponMaster_AllIn"
+// // Great Weapon Master: Bonus Attack
+// data "DisplayName" "h8b230e78ge8f3g4eceg9758g3baec3796c51;1"
+// // As a bonus action, make a melee attack with your equipped weapon.
+// data "Description" "hc0fbb025g37dbg4f3eg96d8g12f45e569e50;2"
+// data "UseCosts" "BonusActionPoint:1"
+// data "SpellFlags" "IsMelee;IsHarmful;Temporary"
+
+// =================================== Great Weapon Master: All In ===================================
+// Damage bonus and attack roll penalty now scale with proficiency bonus
+
+new entry "GreatWeaponMaster_BonusDamage"
+type "PassiveData"
+data "DisplayName" "h307c2db0ge721g3c9cg4b6fga18f158a62c4;1"
+data "Description" "haa04cbe4g96bbg47d3g848bg793733ebf495;2"
+data "DescriptionParams" "1"
+data "Icon" "PassiveFeature_GreatWeaponMaster_BonusDamage"
+data "PriorityOrder" "1"
+data "Properties" "IsToggled;ToggledDefaultAddToHotbar;ToggledDefaultOn;Highlighted"
+data "Boosts" "IF(GreatWeaponMaster(context.Source) and IsMeleeWeaponAttack() and HasPassive('GreatWeaponMaster_BonusDamage',context.Source)):RollBonus(MeleeWeaponAttack, LevelMapValue(CHT_GWM_SS_AttackPenalty));IF(GreatWeaponMaster(context.Source)):CharacterWeaponDamage(LevelMapValue(CHT_GWM_SS_Damage))"

@@ -1,4 +1,6 @@
-// Change cooldowns and use costs of Charger actions
+// =================================== Charger ===================================
+// Description updated to reflect changed cooldowns and use costs of Charger actions
+
 new entry "Charger"
 type "PassiveData"
 data "DisplayName" "hcbdf6d17geaceg427cg82f8g7f215a4ae894;2"
@@ -7,7 +9,9 @@ data "Icon" "Action_Charger_Attack"
 data "Properties" "Highlighted"
 data "Boosts" "UnlockSpell(Rush_Charger_Attack);UnlockSpell(Rush_Charger_Push)"
 
-// Charger: Weapon Attack: remove bonus action cost, add once per turn cooldown, add double your Proficiency Bonus to the damage done (previously flat +5 damage)
+// =================================== Charger: Weapon Attack ===================================
+// Remove bonus action cost, add once per turn cooldown, add double your Proficiency Bonus to the damage done (previously flat +5 damage)
+
 new entry "Rush_Charger_Attack"
 type "SpellData"
 data "SpellType" "Rush"
@@ -19,7 +23,9 @@ data "Description" "h684501ecg1279ga2b7g768cg0576b5993ea0;3"
 data "TooltipDamageList" "DealDamage(MainMeleeWeapon+(2*ProficiencyBonus), MainMeleeWeaponDamageType)"
 data "UseCosts" "ActionPoint:1"
 
-// Charger: Shove: remove action cost
+// =================================== Charger: Shove ===================================
+// Remove action cost
+
 new entry "Rush_Charger_Push"
 type "SpellData"
 data "SpellType" "Rush"

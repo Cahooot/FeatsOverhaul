@@ -1,0 +1,20 @@
+// =================================== Lucky ===================================
+// Making passive Highlighted
+
+new entry "Lucky"
+type "PassiveData"
+using "Lucky"
+// Lucky
+// data "DisplayName" "ha5802839g355ag4509g91a0g9f3a2be20c7f;3"
+// // You can use a <LSTag Type="ActionResource" Tooltip="LuckPoint">Luck Point</LSTag> to gain <LSTag Tooltip="Advantage">Advantage</LSTag> on your next <LSTag Tooltip="AbilityCheck">Ability Check</LSTag>.
+// data "Description" "h426ba056g4512g4e0cgbb3ag176679520d2c;2"
+// data "TooltipUseCosts" "LuckPoint:1"
+// data "Icon" "PassiveFeature_Lucky_RollAdditionalDie"
+// data "EnabledConditions" "HasActionResource('LuckPoint', 1, 0, false, false, context.Source)"
+// data "EnabledContext" "OnAbilityCheck;OnInterruptUsed;OnShortRest;OnLongRest"
+// data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
+data "Properties" "IsToggled;ToggledDefaultAddToHotbar;Highlighted"
+// data "Boosts" "Advantage(AllAbilities)"
+// data "StatsFunctorContext" "OnAbilityCheck"
+// data "StatsFunctors" "UseActionResource(SELF,LuckPoint,1,0)"
+// data "ToggleOffContext" "OnAbilityCheck"

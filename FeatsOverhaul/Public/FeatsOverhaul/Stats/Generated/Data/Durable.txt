@@ -1,0 +1,13 @@
+// =================================== Durable ===================================
+// Now gives hp regen if you are at 60% or less hp
+new entry "Durable"
+type "PassiveData"
+data "DisplayName" "h8b085007gbd97g8d18g4382g5c5d68618fcc;1"
+data "Description" "h80dc8f77991549c094a6c020866c7fe0e9d4;1"
+data "DescriptionParams" "RegainHitPoints()"
+data "Icon" "PassiveFeature_Durable"
+data "Properties" "Highlighted"
+data "Boosts" "Ability(Constitution, 1)"
+data "StatsFunctorContext" "OnTurn"
+data "Conditions" "Combat() and not IsDowned()"
+data "StatsFunctors" "IF(HasHPPercentageEqualOrLessThan(60)):RegainHitPoints(ProficiencyBonus+ConstitutionModifier)"

@@ -1,4 +1,6 @@
+// =================================== Elemental Adept ===================================
 // Now causes you to deal +1 damage when dealing damage of the selected element (previously prevented you from rolling a 1 on a damage die of the selected element)
+
 new entry "ElementalAdept_Fire"
 type "PassiveData"
 data "DisplayName" "heb669d80gf75ag9f6fgfa38g0f4d23a3a0c6;1"

@@ -1,0 +1,10 @@
+// =================================== Actor ===================================
+// Add additional Expertise bonuses
+
+new entry "Actor"
+type "PassiveData"
+data "DisplayName" "h03eb5577gda2dg69f3gad66gd11707b4d127"
+data "Description" "hfc6d7e30gb93fga14fgc3e1g1a2a5f84ea2f"
+data "Icon" "Action_Perform_Voice"
+data "Properties" "Highlighted"
+data "Boosts" "ProficiencyBonus(Skill,Deception);ExpertiseBonus(Deception);ProficiencyBonus(Skill,Persuasion);ExpertiseBonus(Persuasion);ProficiencyBonus(Skill,Intimidation);ExpertiseBonus(Intimidation);ProficiencyBonus(Skill,Performance);ExpertiseBonus(Performance);Ability(Charisma,1)"

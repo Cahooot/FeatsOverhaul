@@ -1,4 +1,18 @@
+// =================================== Shield Master ===================================
+
+// new entry "ShieldMaster_PassiveBonuses"
+// type "PassiveData"
+// // Shield Master
+// data "DisplayName" "hd6465bacg19e6g40d4g8a6cg97785e828a29;1"
+// // While you are wielding a shield, you have a +2 bonus to Dexterity <LSTag Tooltip="SavingThrow">Saving Throws</LSTag>.
+// data "Description" "h56af6823g2011g4dd2ga1ffge8e2db50d784;3"
+// data "Icon" "PassiveFeature_ShieldMaster_PassiveBonuses"
+// data "Properties" "Highlighted"
+// data "Boosts" "IF(HasShieldEquipped() and not HasStatus('SG_Incapacitated')):RollBonus(SavingThrow,2,Dexterity)"
+
+// =================================== Shield Master: Block ===================================
 // Now a passive instead of a reaction (same effect as Rogue’s Evasion passive and does not stack with it) and will correctly halve damage on saving throw fail. Also reduces all damage taken by 1
+
 new entry "ShieldMaster_Block"
 type "PassiveData"
 data "DisplayName" "h855088edge642g42faga481g0487687d1fd1;1"
@@ -12,7 +26,9 @@ data "BoostContext" "OnEquip;OnCreate"
 data "BoostConditions" "HasShieldEquipped(context.Source)"
 data "Boosts" "AreaDamageEvade();DamageReduction(All, Flat, 1)"
 
-// Gives you bonus action Shield Bash skill
+// =================================== Shield Master: Shield Blow ===================================
+// New passive replacing ShieldMaster_Shove that gives you bonus action Shield Bash skill
+
 new entry "ShieldMaster_Blow"
 type "PassiveData"
 data "DisplayName" "h9048c459g4a4bgad7dg2ba6gc4adb20a9a4c;1"

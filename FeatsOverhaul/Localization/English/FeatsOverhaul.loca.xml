@@ -25,7 +25,7 @@
 	<content contentuid="hdf9b2568g4822g7844gb402g6dcddedf3e71" version="3">You have gained &lt;LSTag Tooltip="Proficiency"&gt;Proficiency&lt;/LSTag&gt; with all ranged weapons and &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; score has increased by [1].</content>
 	<content contentuid="hcb7e445fg83c8g9612g06bagae1967394c39" version="1">Bow Expert: Point-Blank</content>
 	<content contentuid="h1cd080f5gbef9g3945gc187g68b5f3c9d3f2" version="1">When you make bow attacks within melee range, the &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; do not have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;.</content>
-	<content contentuid="h48bfcf7eg2988gf03bgefd6g6293758c31fa" version="2">Bow Expert: Wounding </content>
+	<content contentuid="h48bfcf7eg2988gf03bgefd6g6293758c31fa" version="2">Bow Expert: Wounding</content>
 	<content contentuid="h605c8779gc582gadffg6e7fg720a537b76bf" version="4">&lt;LSTag Type="Spell" Tooltip="Projectile_PiercingShot"&gt;Piercing Shot&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Projectile_HamstringShot"&gt;Hamstring Shot&lt;/LSTag&gt; are harder for targets to resist and inflict their conditions for twice as long.</content>
 
 	<!-- Charger -->

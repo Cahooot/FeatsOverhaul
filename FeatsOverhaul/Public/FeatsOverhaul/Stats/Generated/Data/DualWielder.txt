@@ -1,0 +1,38 @@
+// =================================== Dual Wielder ===================================
+
+// new entry "DualWielder_PassiveBonuses"
+// type "PassiveData"
+// // Dual Wielder
+// data "DisplayName" "h9ef97c94gf583g4b93gadbbgebca8fbf2d84;2"
+// // You can use Two-Weapon Fighting even if the weapons you are wielding aren't Light. You cannot dual-wield <LSTag Tooltip="TwoHanded">Two-Handed</LSTag> weapons.
+// data "Description" "ha9556d5ag4aefg4913gb866g5daabe7fbc78;2"
+// data "Icon" "PassiveFeature_DualWielder_PassiveBonuses"
+// data "PriorityOrder" "1"
+// data "Properties" "Highlighted"
+// data "Boosts" "DualWielding(true);DualWielding(false)"
+
+// =================================== Dual Wielder: Bonus Armour Class ===================================
+
+// new entry "DualWielder_BonusAC"
+// type "PassiveData"
+// // Dual Wielder: Bonus Armour Class
+// data "DisplayName" "h28117af8g9ff5g40c2gb780g675b8d6a54ab;2"
+// // You have a +1 bonus to <LSTag Tooltip="ArmourClass">Armour Class</LSTag> while wielding a melee weapon in each hand.
+// data "Description" "h29e0a6b9gc775g4d54gac59g046dfec1825a;2"
+// data "Icon" "PassiveFeature_DualWielder_BonusAC"
+// data "PriorityOrder" "1"
+// data "Properties" "Highlighted"
+// data "BoostContext" "OnEquip;OnCreate"
+// data "BoostConditions" "DualWielder(context.Source)"
+// data "Boosts" "AC(1)"
+
+// Dummy status for the tooltip for FightingStyle_TwoWeaponFighting in the feats selection screen, since Passive-type LSTags don't work in the feats selection screen anymore for some reason
+new entry "CHT_FIGHTINGSTYLE_TWOWEAPONFIGHTING"
+type "StatusData"
+data "StatusType" "BOOST"
+// Two-Weapon Fighting
+data "DisplayName" "hdcfca7a2ga47fg4ea3g956ag264e0810b8ba;2"
+// When you make an <LSTag Tooltip="AttackRoll">attack</LSTag> with your off-hand weapon, you can add your <LSTag Tooltip="AbilityModifier">Ability Modifier</LSTag> to the damage of the attack.
+data "Description" "h5153f9f3g7dcbg45d9gae1bgd19f398959a2;4"
+data "Icon" "PassiveFeature_FightingStyle_TwoWeaponFighting"
+data "StackId" "CHT_FIGHTINGSTYLE_TWOWEAPONFIGHTING"

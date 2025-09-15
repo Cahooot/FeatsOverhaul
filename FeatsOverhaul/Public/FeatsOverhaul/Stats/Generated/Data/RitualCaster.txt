@@ -1,4 +1,6 @@
+// =================================== Ritual Caster: Free Spells ===================================
 // Now reduces cost of learning spells from all scrolls by 50%
+
 new entry "RitualCaster_FreeSpells"
 type "PassiveData"
 data "DisplayName" "ha96a2d1cgc088g2a1cg4e75g6ccdb09d5c4f;1"
@@ -8,7 +10,9 @@ data "Icon" "PassiveFeature_RitualCaster_FreeSpells"
 data "Properties" "Highlighted"
 data "Boosts" "Savant(Enchantment);Savant(Divination);Savant(Necromancy);Savant(Abjuration);Savant(Illusion);Savant(Conjuration);Savant(Transmutation);Savant(Evocation)"
 
+// =================================== Ritual Caster: Freecast ===================================
 // New passive to allow user to cast a Ritual spell in combat for free 
+
 new entry "CHT_RitualCaster_Freecast"
 type "PassiveData"
 data "DisplayName" "haa1b38b0ge8fdg424fgbef2gdc909906eae3;1"
@@ -53,7 +57,10 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 data "RemoveConditions" "HasStatus('SHORT_REST')"
 data "RemoveEvents" "OnStatusApplied"
 
-// Passives for chance of restoring spell slots when short resting (done through separate passives because the other RollDieAgainstDC() don't work here if in the same StatsFunctor line for some reason)
+// =================================== Ritual Caster: Regain Spell Slot ===================================
+// New passive for chance of restoring spell slots when short resting 
+// (Done through separate passives because the other RollDieAgainstDC() don't work here if in the same StatsFunctor line for some reason)
+
 new entry "RitualCaster_SpellSlotRestoration_1"
 type "PassiveData"
 data "DisplayName" "hd9326ba8g3fddg4eb3g90cdg08567cb258a5;1"

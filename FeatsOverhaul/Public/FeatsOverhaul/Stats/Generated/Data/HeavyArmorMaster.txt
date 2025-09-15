@@ -1,4 +1,6 @@
+// =================================== Heavy Armour Master ===================================
 // Now gives damage reduction for all incoming damage, and scales with proficiency bonus
+
 new entry "HeavyArmorMaster"
 type "PassiveData"
 data "DisplayName" "h0f1a3597g8d4cg0da9g9326g924f0bb4f8fe;1"
@@ -10,7 +12,8 @@ data "BoostContext" "OnEquip;OnCreate"
 data "BoostConditions" "HasHeavyArmor(context.Source)"
 data "Boosts" "DamageReduction(All, Flat, LevelMapValue(CHT_HeavyArmourMaster))"
 
-// Ability score improvements through passives
+// =================================== Ability score improvements through passives ===================================
+
 new entry "HeavyArmorMaster_Strength"
 type "PassiveData"
 data "DisplayName" "h61359d4f1c9640b9a528258701ee1418968f;1"

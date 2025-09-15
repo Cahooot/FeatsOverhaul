@@ -1,4 +1,6 @@
-// Polearm Master: Opportunity Attack: add tridents and javelins, correct description to include pikes (which were always included but not mentioned), and dynamically give non-Reach polearms the Reach property when they are equipped with both hands
+// =================================== Polearm Master: Opportunity Attack ===================================
+// Add tridents and javelins, correct description to include pikes (which were always included but not mentioned), and dynamically give non-Reach polearms the Reach property when they are equipped with both hands. Passive is now highlighted
+
 new entry "PolearmMaster_AttackOfOpportunity"
 type "PassiveData"
 data "DisplayName" "h6b81fdc6gdc6egec70g7f25gf2cbec87fff8;1"
@@ -8,6 +10,7 @@ data "Icon" "PassiveFeature_PolearmMaster_AttackOfOpportunity"
 data "Boosts" "UnlockInterrupt(Interrupt_PolearmMaster)"
 data "StatsFunctorContext" "OnEquip;OnTurn;OnAttack"
 data "StatsFunctors" "IF(CHT_PolearmMasterCheck(context.Source) and not HasWeaponProperty(WeaponProperties.Reach, GetActiveWeapon(context.Source, true)) and Goon_IsPolearm(GetActiveWeapon(context.Source, false))):ApplyEquipmentStatus(MeleeMainHand,CHT_REACH_OVERWRITE,100,1);IF(not CHT_PolearmMasterCheck(context.Source) and HasStatus('CHT_REACH_OVERWRITE',GetActiveWeapon(context.Source, true))):ApplyEquipmentStatus(MeleeMainHand,CHT_REACH_OVERWRITE_CLEANER,100,0)"
+data "Properties" "Highlighted"
 
 new entry "CHT_REACH_OVERWRITE"
 type "StatusData"
@@ -36,14 +39,16 @@ data "Conditions" "(Player(context.Observer) or not HasStatus('SG_Invisible',con
 // data "EnableCondition" "not HasAnyStatus({'SG_Polymorph','SG_Blinded'}) or HasAnyStatus({'SG_Disguise','WILDSHAPE_STARRY_ARCHER_PLAYER','WILDSHAPE_STARRY_CHALICE_PLAYER','WILDSHAPE_STARRY_DRAGON_PLAYER'});"
 data "EnableCondition" "(not HasStatus('SG_Polymorph') or Goon_IsUnrestrictedPolymorphStatus()) and not HasStatus('SG_Blinded')"
 
-// Polearm Master: Bonus Attack: also add tridents and javelins, and include pikes in description
+// =================================== Polearm Master: Bonus Attack ===================================
+// Also add tridents and javelins, and include pikes in description. Passive is now highlighted
+
 new entry "PolearmMaster_BonusAttack"
 type "PassiveData"
 data "DisplayName" "h373122d1g38ceg802ag719egbfa84a2cb266;1"
 data "Description" "h86eac956g2d43g4d6fg23cbg701bb67a7e8d;1"
 data "DescriptionParams" "DealDamage(1d4+max(DexterityModifier,StrengthModifier), Bludgeoning)"
 data "Icon" "Action_PolearmMaster_BonusAttack"
-data "Properties" "OncePerTurn"
+data "Properties" "OncePerTurn;Highlighted"
 data "StatsFunctorContext" "OnAttack"
 data "Conditions" "TurnBased() and ConditionResult(context.HitDescription.FirstAttack) and IsMeleeWeaponAttack() and (HasWeaponProperty(WeaponProperties.Reach, GetAttackWeapon(context.Source)) or Tagged('WPN_STAVE', GetAttackWeapon(context.Source)) or Tagged('WPN_TRIDENT', GetActiveWeapon(context.Source, true)) or Tagged('WPN_SPEAR', GetAttackWeapon(context.Source))  or Tagged('WPN_JAVELIN', GetActiveWeapon(context.Source, true)))"
 data "StatsFunctors" "ApplyStatus(SELF, POLEARM_MASTER_BONUS_ATTACK, 100, 1)"
@@ -57,6 +62,7 @@ using "POLEARM_MASTER_BONUS_ATTACK"
 data "Boosts" "UnlockSpell(Target_PolearmMaster_BonusAttack);UnlockSpellVariant(SpellId('Target_PolearmMaster_BonusAttack'),ModifyIconGlow())"
 
 // Make damage riders work with the bonus attack and have the damage also change to using your spellcasting ability modifier if you have a spellcasting ability override status on your weapon
+// TODO: figure out why the HEXBLADE_BIND status isn't working in either of Goon's khn checks (Goon_IsSpellcastingModifierWeapon and Goon_IsCharismaModifierWeapon) nor in the vanilla status check used for this spell
 new entry "Target_PolearmMaster_BonusAttack"
 type "SpellData"
 data "SpellType" "Target"

@@ -1,4 +1,6 @@
+// =================================== Medium Armour Master ===================================
 // Replaced effects with flat +1 AC while wearing medium armour, and gives temporary hit points at start of combat
+
 new entry "MediumArmorMaster"
 type "PassiveData"
 data "DisplayName" "h014e2037gb08dg99fdg9643gac915d5fdc69;1"
@@ -22,7 +24,8 @@ data "Description" "h3d05f29fd30a40729b20979984a8f787a15g;1"
 data "StackPriority" "3"
 data "Boosts" "TemporaryHP(ProficiencyBonus)"
 
-// Ability score improvements through passives
+// =================================== Ability score improvements through passives ===================================
+
 new entry "MediumArmorMaster_Strength"
 type "PassiveData"
 data "DisplayName" "hb4eaca87b146425a9b9a61e39d38b7582ad0;1"

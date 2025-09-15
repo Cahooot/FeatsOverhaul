@@ -1,0 +1,41 @@
+// =================================== Sentinel: Vengeance ===================================
+
+// new entry "Sentinel_Attack"
+// type "PassiveData"
+// // Sentinel: Vengeance
+// data "DisplayName" "h17b7fde5gdddbg450cg9f74gdd11aca584b1;4"
+// // When an enemy within melee range attacks an ally, you can use a reaction to make a weapon attack against that enemy.
+// data "Description" "h09141465g4771g4c38g8e53g1fbc3b0153e1;4"
+// data "Icon" "PassiveFeature_Sentinel_Attack"
+// data "Properties" "Highlighted"
+// data "Boosts" "UnlockInterrupt(Interrupt_Sentinel)"
+
+// =================================== Sentinel: Snare ===================================
+
+// new entry "Sentinel_ZeroSpeed"
+// type "PassiveData"
+// // Sentinel: Snare
+// data "DisplayName" "h5d1804e6g83a8g4cefga5b0g89437047cae3;4"
+// // When you hit a creature with an <LSTag Tooltip="OpportunityAttack">Opportunity Attack</LSTag>, it can no longer move for the rest of its turn.
+// data "Description" "h78aadfb6g3438g4bdcg948fg08900665571d;5"
+// data "Icon" "PassiveFeature_Sentinel_ZeroSpeed"
+// data "Properties" "Highlighted"
+
+// =================================== Sentinel: Opportunity Advantage ===================================
+
+// new entry "Target_Sentinel_AttackOfOpportunity"
+// type "SpellData"
+// data "SpellType" "Target"
+// using "Target_MainHandAttack"
+// data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);ApplyStatus(SENTINEL,100,1)"
+// data "Icon" "PassiveFeature_Sentinel_Attack"
+// data "TooltipStatusApply" "ApplyStatus(SENTINEL,100,1)"
+
+// Add pushback to Sentinel's opportunity attack if you also have Polearm Master
+new entry "Target_Sentinel_AttackOfOpportunity"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_MainHandAttack"
+data "SpellSuccess" "IF(HasPassive('PolearmMaster_AttackOfOpportunity',context.Source) and (HasWeaponProperty(WeaponProperties.Reach, GetAttackWeapon(context.Source)) or Tagged('WPN_STAVE', GetAttackWeapon(context.Source)) or Tagged('WPN_TRIDENT', GetActiveWeapon(context.Source, true)) or Tagged('WPN_SPEAR', GetAttackWeapon(context.Source)))):Force(1.1);DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);ExecuteWeaponFunctors(MainHand);ApplyStatus(SENTINEL,100,1)"
+data "Icon" "PassiveFeature_Sentinel_Attack"
+data "TooltipStatusApply" "ApplyStatus(SENTINEL,100,1)"

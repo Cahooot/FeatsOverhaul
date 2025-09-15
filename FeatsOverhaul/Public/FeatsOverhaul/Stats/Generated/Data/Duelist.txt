@@ -1,6 +1,6 @@
-// ==================================== Vanilla Defensive Duellist ====================================
+// =================================== Duellist: Parry ===================================
+// Name changed, and have this passive also unlock the spell to remove Versatile property from your weapon (under this passive as it doesn't have any BoostConditions)
 
-// Change name of passive to "Duellist: Defence" and have it also unlock the spell to remove Versatile property from your weapon (under this passive as it doesn't have any BoostConditions)
 new entry "DefensiveDuelist"
 type "PassiveData"
 data "DisplayName" "h830c8c3da7604a92892ae9328d498af54a43;1"
@@ -37,9 +37,9 @@ data "EnableCondition" "(not HasStatus('SG_Polymorph') or Goon_IsUnrestrictedPol
 data "EnableContext" "OnStatusApplied;OnStatusRemoved;OnEquip"
 data "InterruptFlags" "InterruptWhileInvisible"
 
-// ==================================== New Duellist: Precision passive ====================================
-
+// =================================== Duellist: Precision ===================================
 // New passive for when equipping a Finesse weapon in one hand with off-hand empty
+
 new entry "DefensiveDuelist_Precision"
 type "PassiveData"
 data "DisplayName" "h79a678f01ae64219b238623f25128313ae45;1"
@@ -52,7 +52,7 @@ data "BoostContext" "OnCreate;OnEquip"
 data "BoostConditions" "HasWeaponProperty(WeaponProperties.Finesse, GetActiveWeapon(context.Observer)) and not HasWeaponProperty(WeaponProperties.Versatile, GetActiveWeapon(context.Observer)) and IsProficientWith(context.Observer, GetActiveWeapon(context.Observer)) and IsOffHandSlotEmpty()"
 data "Boosts" "RollBonus(MeleeWeaponAttack, ProficiencyBonus);IF(IsMeleeWeaponAttack()):ReduceCriticalAttackThreshold(1)"
 
-// ==================================== New spell to remove Versatile property ====================================
+// =================================== New spell to remove Versatile property ===================================
 
 // New spell given to remove Versatile property from a Versatile + Finesse weapon (so it can be used with the new Duellist: Precision passive)
 new entry "CHT_Duelist_RemoveVersatile"

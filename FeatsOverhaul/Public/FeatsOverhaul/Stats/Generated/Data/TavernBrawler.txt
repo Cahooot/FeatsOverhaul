@@ -1,0 +1,11 @@
+// =================================== Tavern Brawler ===================================
+// Make attack roll and damage bonus scale with proficiency bonus instead of Strength
+
+new entry "TavernBrawler"
+type "PassiveData"
+data "DisplayName" "h40099672g99d5ge597g2b9bgac0b47b23dd0;1"
+data "Description" "haed3f9b3g3c23g82f5g5d71gb78ca8f34001;1"
+data "DescriptionParams" "1"
+data "Icon" "PassiveFeature_TavernBrawler"
+data "Properties" "Highlighted"
+data "Boosts" " IF(IsUnarmedAttack()):RollBonus(Attack,LevelMapValue(CHT_TB));IF(IsMeleeUnarmedAttack()):CharacterUnarmedDamage(LevelMapValue(CHT_TB));IF((IsRangedUnarmedAttack() or SpellId('Throw_ImprovisedWeapon') or SpellId('Throw_ImprovisedWeaponBerserker')) and not HasStatus('SG_Polymorph_BeastShape',context.Source)):DamageBonus(LevelMapValue(CHT_TB));IF((IsUnarmedAttack() and HasStatus('SG_Polymorph_BeastShape',context.Source) or HasStatus('SLAYER_PLAYER',context.Source) or HasStatus('SLAYER_PLAYER_10',context.Source)) and not (Tagged('MYRMIDON_AIR',context.Source) or Tagged('MYRMIDON_FIRE',context.Source) or Tagged('MYRMIDON_WATER',context.Source))):DamageBonus(LevelMapValue(CHT_TB))"

@@ -1,0 +1,11 @@
+// =================================== Tough ===================================
+// Now gives +2 bonus to Constitution saving throws
+
+new entry "Tough"
+type "PassiveData"
+data "DisplayName" "hc0a56c08gbc9fgc88bg6c9fgc6f5d075d0f5;1"
+data "Description" "hd6e7dd41gf661g5bafg8632g841e0dbce7ac;2"
+data "DescriptionParams" "Level*2"
+data "Icon" "PassiveFeature_Tough"
+data "Properties" "Highlighted"
+data "Boosts" "IncreaseMaxHP(Level*2);RollBonus(SavingThrow,2,Constitution);Ability(Constitution,1)"

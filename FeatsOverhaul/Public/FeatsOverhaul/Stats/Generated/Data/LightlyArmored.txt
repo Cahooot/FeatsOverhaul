@@ -1,4 +1,6 @@
+// =================================== Lightly Armoured ===================================
 // Updated description text
+
 new entry "LightlyArmored"
 type "PassiveData"
 data "DisplayName" "h7d111bb2c396488ba644afd9b4e62060ge39;1"
@@ -8,7 +10,8 @@ data "Icon" "PassiveFeature_LightlyArmored"
 data "Properties" "Highlighted"
 data "Boosts" "Proficiency(LightArmor)"
 
-// Ability score improvements through passives + giving +1 saving throw bonus for selected ability
+// =================================== Ability score improvements through passives + giving +1 saving throw bonus for selected ability ===================================
+
 new entry "LightlyArmored_Strength"
 type "PassiveData"
 data "DisplayName" "hc961c61eged64g4cdegac78gead899f4c561;1"

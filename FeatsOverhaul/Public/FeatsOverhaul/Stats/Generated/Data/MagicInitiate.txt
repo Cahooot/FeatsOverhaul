@@ -1,4 +1,6 @@
+// =================================== Magic Initiate ===================================
 // Gives 1st-level spell slot (since spell chosen now uses a spell slot) and gives ability score improvement in spellcasting ability of chosen class
+
 new entry "MagicInitiate_Bard"
 type "PassiveData"
 data "DisplayName" "h7d70f921g6dfeg1d14g58b3g9aaae9557276;1"

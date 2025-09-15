@@ -1,4 +1,6 @@
-// Mobile: Evade Opportunity Attack: now gives disadvantage to all opportunity attacks against you (previously caused you to not provoke an opportunity attack against a target you make a melee attack against)
+// =================================== Mobile: Evade Opportunity Attack ===================================
+// Now gives disadvantage to all opportunity attacks against you (previously caused you to not provoke an opportunity attack against a target you make a melee attack against)
+
 new entry "Mobile_CounterAttackOfOpportunity"
 type "PassiveData"
 data "DisplayName" "hbac2c75bg82c1g4192g903fg37d9f1e17bc5;1"
@@ -8,7 +10,9 @@ data "PriorityOrder" "1"
 data "Properties" "Highlighted"
 data "Boosts" "IF(IsReactionAttack(context.Source)):Disadvantage(AttackTarget)"
 
-// Mobile: Evade Difficult Terrain: now prevents your movement speed from being reduced by any effect (previously made you immune to Difficult Terrain after using Dash)
+// =================================== Mobile: Evade Difficult Terrain ===================================
+// Now prevents your movement speed from being reduced by any effect (previously made you immune to Difficult Terrain after using Dash)
+
 new entry "Mobile_DashAcrossDifficultTerrain"
 type "PassiveData"
 data "DisplayName" "hc6631404g8aa1g4c6cga651g2c3a0cec268e;1"
