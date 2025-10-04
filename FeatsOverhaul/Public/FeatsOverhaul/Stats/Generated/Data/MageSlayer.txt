@@ -46,7 +46,7 @@ data "Boosts" "IF(IsSpell()):Advantage(AllSavingThrows);SpellResistance(Resistan
 data "Properties" "Highlighted"
 
 // =================================== Mage Slayer: Attack Caster ===================================
-// Range of attack is extended to 3m if using a Reach weapon (previously always 2m). Passive is now highlighted
+// Range of attack is extended to 3m if using a Reach weapon (previously always 2m).
 
 new entry "Interrupt_MageSlayer"
 type "InterruptData"
