@@ -55,6 +55,4 @@ data "DisplayName" "h420e6d49gbb3eg3520g1292gf50ab0c4571a;1"
 data "Description" "he317842dg113cgb40ege0c5gce655c004086;1"
 // data "Conditions" "IsAbleToReact(context.Observer) and not Self(context.Source, context.Observer) and Enemy(context.Source, context.Observer) and IsSpell() and not Uninterruptible() and not DistanceToEntityGreaterThan(2, context.ObserverPosition, context.Source) and not AnyEntityIsItem()"
 data "Conditions" "IsAbleToReact(context.Observer) and not Self(context.Source, context.Observer) and Enemy(context.Source, context.Observer) and IsSpell() and not Uninterruptible() and ((not DistanceToEntityGreaterThan(3, context.ObserverPosition, context.Source) and HasWeaponProperty(WeaponProperties.Reach, GetActiveWeapon(context.Observer))) or (not DistanceToEntityGreaterThan(2, context.ObserverPosition, context.Source) and not (HasWeaponProperty(WeaponProperties.Reach, GetActiveWeapon(context.Observer))))) and not AnyEntityIsItem()"
-// data "Properties" ""
-data "Properties" "Highlighted"
 
