@@ -50,5 +50,7 @@ data "SpellSuccess" "IF(Character() and not HasPassive('CrossbowExpert_Wounding'
 
 new entry "BowExpert_Dexterity"
 type "PassiveData"
+// Bow Expert
+data "DisplayName" "h00904b9fg3924gd523g5186gc2ac05c309b2;2"
 data "Boosts" "Ability(Dexterity,1)"
 
