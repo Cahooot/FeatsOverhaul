@@ -172,7 +172,7 @@
                 <node id="Feat">
                     <attribute id="Name" type="FixedString" value="WeaponMaster"/>
                     <attribute id="PassivesAdded" type="LSString" value="WeaponMaster"/>
-                    <attribute id="Selectors" type="LSString" value="SelectPassives(9537f589-f587-45de-a9a6-797320e3760b,1);SelectPassives(b79c7f4a-76ee-4603-a05a-e3a444972174,1)"/>
+                    <attribute id="Selectors" type="LSString" value="SelectPassives(9537f589-f587-45de-a9a6-797320e3760b,1);SelectPassives(b79c7f4a-76ee-4603-a05a-e3a444972174,1,Weapon Master Fighting Style)"/>
                     <attribute id="UUID" type="guid" value="b153e75c-27a2-4412-95cd-60b477121679"/>
                 </node>
             </children>
