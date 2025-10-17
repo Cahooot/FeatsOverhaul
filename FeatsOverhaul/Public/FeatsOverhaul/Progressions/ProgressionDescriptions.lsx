@@ -23,8 +23,8 @@
         <node id="ProgressionDescription">
           <attribute id="DisplayName" type="TranslatedString" handle="h2926d620ga93fg480fgb65bg54e8be585e06" version="1" />
           <attribute id="Description" type="TranslatedString" handle="h26b878b7g4924g4d0fgbc5dgf0abacb71a10" version="1" />
-          <attribute id="SelectorId" type="FixedString" value="Weapon Master Fighting Style" />
-          <attribute id="UUID" type="guid" value="b79c7f4a-76ee-4603-a05a-e3a444972174" />
+          <attribute id="SelectorId" type="FixedString" value="WeaponMaster_FightingStyle" />
+          <attribute id="UUID" type="guid" value="dded8828-ef74-4cf6-bfd4-556316748af9" />
         </node>
       </children>
     </node>
