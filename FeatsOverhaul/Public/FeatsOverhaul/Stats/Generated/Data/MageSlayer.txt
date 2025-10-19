@@ -20,7 +20,7 @@ data "StackId" "MAGESLAYER_AURA"
 data "StackPriority" "10"
 data "AuraRadius" "3"
 data "AuraStatuses" "TARGET:IF(Enemy()):ApplyStatus(MAGESLAYER_AURA_BUFF)"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;IgnoreResting"
 data "StatusGroups" "SG_RemoveOnRespec"
 
 new entry "MAGESLAYER_AURA_BUFF"
