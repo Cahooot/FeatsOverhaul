@@ -17,16 +17,6 @@
 					<!-- <attribute id="Selectors" type="LSString" value="SelectAbilities(404cecb5-77e7-404a-b7ce-1f9427bab6f1,1,1)"/> -->
 					<attribute id="UUID" type="guid" value="173e3489-1346-42d5-b5d9-a147443418a5"/>
 				</node>
-				<node id="Feat">
-                    <attribute id="CanBeTakenMultipleTimes" type="bool" value="false"/>
-                    <attribute id="Name" type="FixedString" value="SkeletonCrewFeat"/>
-                    <!-- <attribute id="PassivesAdded" type="LSString" value="Valkrana_SkeletonCrew_Feat_Passive;Valkrana_SkeletonCrew_Toggle"/> -->
-                    <attribute id="PassivesAdded" type="LSString" value=""/>
-                    <attribute id="PassivesRemoved" type="LSString" value=""/>
-                    <attribute id="Requirements" type="LSString" value=""/>
-                    <attribute id="Selectors" type="LSString" value=""/>
-                    <attribute id="UUID" type="guid" value="56c6dae7-69a2-498b-bd5a-b60de0165562"/>
-                </node>
 			</children>
 		</node>
 	</region>

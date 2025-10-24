@@ -6,8 +6,6 @@
 	<content contentuid="h6b57a318g3f5fg4327g9304g2130e7162dec" version="1">Ritual Spells</content>
 	<content contentuid="h88d3d5bcg799ag41b2gbf41gc051b93a9450" version="1">Contains the &lt;LSTag Tooltip="RitualSpell"&gt;ritual spells&lt;/LSTag&gt; you learned from Ritual Caster.</content>
 	<content contentuid="h308d9261g9fd2g4dfaga2a7gdf6142b9eb8b" version="1">The number you need to roll for a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; is reduced by 1. When you hit a target with an &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt; you regain 1m of &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;. If you &lt;LSTag Tooltip="CriticalHit"&gt;Critically Hit&lt;/LSTag&gt; or strike a killing blow, you regain 3m instead.</content>
-	<content contentuid="h49dfce4bg9ab6g46c0gbffeg853b690c78e6" version="1">Austere Adventurer</content>
-	<content contentuid="h9397a8b2g81e7g40a6gbdd7ge463767cce4c" version="1">You choose not to take a feat.</content>
 	<content contentuid="h6cee28687ca14f85a43334b0112a50d7ae73" version="1">War Caster</content>
 	<content contentuid="h38ecd31dgf4a3g48f2g8f4eg001116af57de" version="1">You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; to maintain &lt;LSTag Tooltip="Concentration"&gt;Concentration&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;You can also use a &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reaction&lt;/LSTag&gt; to cast a spell when a hostile creature's movement provokes an &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attack&lt;/LSTag&gt; from you.</content>
 </contentList>
