@@ -149,36 +149,6 @@ function CHT_NotBalancedWeaponActive(entity)
 	return ConditionResult(result.Result, {ConditionError("CHT_HasBalancedWeaponActive")})
 end
 
-function CHT_SpellSniperEmpoweredCheckCantrips()
-    return 
-	SpellId('Target_ChillTouch') | SpellId('Target_ChillTouch_UAWC_Melee') 
-	| SpellId('Projectile_FireBolt') | SpellId('Projectile_MAG_FireBolt_Staff') | SpellId('Projectile_FireBolt_Goblin') | SpellId('Projectile_FireBolt_UAWC_Melee') | SpellId('Projectile_FireBolt_Monk') 
-	| SpellId('Projectile_IllusionaryDart') 
-	| SpellId('Projectile_MagicStone') 
-	| SpellId('Projectile_RayOfFrost') | SpellId('Projectile_MAG_RayOfFrost_Staff') | SpellId('Projectile_RayOfFrost_UAWC_Melee') 
-	| SpellId('Projectile_RockSlam') 
-	| SpellId('Target_SonicBlast') 
-	| SpellId('SD_Projectile_StarryWisp') | SpellId('SD_Projectile_StarryWisp_WS') | SpellId('CL_Projectile_OneDnD_StarryWisp_SHV_UAWC_Melee') 
-	| SpellId('Target_WaterBullet')
-end
-
-function CHT_SpellSniperEmpoweredCheckLvl1()
-    return 
-	SpellId('Target_ChaosBolt') | SpellId('Target_ChaosBolt_2') | SpellId('Target_ChaosBolt_3') | SpellId('Target_ChaosBolt_4') | SpellId('Target_ChaosBolt_5') | SpellId('Target_ChaosBolt_6') | SpellId('Target_ChaosBolt_7') | SpellId('Target_ChaosBolt_8') | SpellId('Target_ChaosBolt_9') 
-	| SpellId('Projectile_IceKnife') | SpellId('Projectile_IceKnife_2') | SpellId('Projectile_IceKnife_3') | SpellId('Projectile_IceKnife_4') | SpellId('Projectile_IceKnife_5') | SpellId('Projectile_IceKnife_6') | SpellId('Projectile_IceKnife_7') | SpellId('Projectile_IceKnife_8') | SpellId('Projectile_IceKnife_9') | SpellId('Projectile_MAG_IceKnife') 
-	| SpellId('Projectile_GuidingBolt') | SpellId('Projectile_GuildingBolt_2') | SpellId('Projectile_GuildingBolt_3') | SpellId('Projectile_GuidingBolt_4') | SpellId('Projectile_GuidingBolt_5') | SpellId('Projectile_GuidingBolt_6') | SpellId('Projectile_GuidingBolt_7') | SpellId('Projectile_GuidingBolt_8') | SpellId('Projectile_GuidingBolt_9') | SpellId('Projectile_GuidingBolt_StarMap') 
-	| SpellId('Projectile_MagicMissile') | SpellId('Projectile_MagicMissile_2') | SpellId('Projectile_MagicMissile_3') | SpellId('Projectile_MagicMissile_4') | SpellId('Projectile_MagicMissile_5') | SpellId('Projectile_MagicMissile_6') | SpellId('Projectile_MagicMissile_7') | SpellId('Projectile_MagicMissile_8') | SpellId('Projectile_MagicMissile_9') | SpellId('Projectile_UND_MagicMissile_SocietyOfBrilliance_Amulet') 
-	| SpellId('Projectile_AcidArrow') | SpellId('Projectile_AcidArrow_2') | SpellId('Projectile_AcidArrow_3') | SpellId('Projectile_AcidArrow_4') | SpellId('Projectile_AcidArrow_5') | SpellId('Projectile_AcidArrow_6') | SpellId('Projectile_AcidArrow_7') | SpellId('Projectile_AcidArrow_8') | SpellId('Projectile_AcidArrow_9') | SpellId('Projectile_MAG_MelfsMagicArrow') 
-	| SpellId('Projectile_RayOfSickness') | SpellId('Projectile_RayOfSickness_2') | SpellId('Projectile_RayOfSickness_3') | SpellId('Projectile_RayOfSickness_4') | SpellId('Projectile_RayOfSickness_5') | SpellId('Projectile_RayOfSickness_6') | SpellId('Projectile_RayOfSickness_7') | SpellId('Projectile_RayOfSickness_8') | SpellId('Projectile_RayOfSickness_9') | SpellId('Projectile_RayOfSickness_BookOfAnceintSecrets') | SpellId('Projectile_HAG_RayOfSickness_Staff') | SpellId('Projectile_MAG_Legendary_Chromatic_RayOfSickness') 
-	| SpellId('Projectile_WitchBolt') | SpellId('Projectile_WitchBolt_2') | SpellId('Projectile_WitchBolt_3') | SpellId('Projectile_WitchBolt_4') | SpellId('Projectile_WitchBolt_5') | SpellId('Projectile_WitchBolt_6') | SpellId('Projectile_WitchBolt_7') | SpellId('Projectile_WitchBolt_8') | SpellId('Projectile_WitchBolt_9') | SpellId('Shout_WitchBolt_Activate')
-end
-
-function CHT_SpellSniperEmpoweredCheckLvl3()
-    return 
-	SpellId('Projectile_LightningArrow') | SpellId('Projectile_LightningArrow_4') | SpellId('Projectile_LightningArrow_5') | SpellId('Projectile_LightningArrow_6') | SpellId('Projectile_LightningArrow_7') | SpellId('Projectile_LightningArrow_8') | SpellId('Projectile_LightningArrow_9') 
-	| SpellId('Zone_AetherLance') | SpellId('Zone_AetherLance_4') | SpellId('Zone_AetherLance_5') | SpellId('Zone_AetherLance_6') | SpellId('Zone_AetherLance_7') | SpellId('Zone_AetherLance_8') | SpellId('Zone_AetherLance_9') 
-end
-
 function CHT_RitualCasterCheck()
     return 
 	SpellId('Target_AntHaul') | IsSpellChildOrVariantFromContext('Target_AntHaul') 
