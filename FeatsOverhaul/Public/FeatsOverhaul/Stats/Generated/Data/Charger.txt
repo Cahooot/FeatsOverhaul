@@ -6,7 +6,7 @@ type "PassiveData"
 data "DisplayName" "hcbdf6d17geaceg427cg82f8g7f215a4ae894;2"
 data "Description" "h4be0a2bcg66afg492fgb7fag79e1a07857f9;5"
 data "Icon" "Action_Charger_Attack"
-data "Properties" "Highlighted"
+data "Properties" "Highlighted;ForceShowInCC"
 data "Boosts" "UnlockSpell(Rush_Charger_Attack);UnlockSpell(Rush_Charger_Push)"
 
 // =================================== Charger: Weapon Attack ===================================
